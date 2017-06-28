@@ -29,14 +29,7 @@ namespace CarWorkshop
             Personel user = new Personel();
             user.password = Password_TextBox.Text;
             user.username = Username_TextBox.Text;
-            Personel result = new Personel();
-            try
-            {
-                result = AdminService.GetPersonelWithPassword(user);
-            }catch(ServiceException exc)
-            {
-                Alert.DisplayError(exc.Message);
-            }
+            var result = AdminService.GetPersonelWithPassword(user);
             if(result==null)
             {
                 Alert.DisplayError("Invalid username or password!");
@@ -54,34 +47,39 @@ namespace CarWorkshop
                 mainWindow = new WorkerMainWindow(result);
             }
 
-            Program.mainWindow = mainWindow;
-            mainWindow.InitOnShow();
+                Program.mainWindow = mainWindow;
+                mainWindow.InitOnShow();
 
-            this.Visible = false;
-            mainWindow.ShowDialog();
-            /*
-            string adminText = "admin";
-            string managerText = "manager";
-            //this.Username_TextBox.Text = managerText;
-            MainWindow mainWindow;
-            if (this.Username_TextBox.Text == adminText)
-            {
-                mainWindow = new AdminMainWindow();
-            }
-            else if (this.Username_TextBox.Text == managerText)
-            {
-                mainWindow = new ManagerMainWindow(new DataLayer.Personel());    
-            }
-            else
-            {
-                mainWindow = new WorkerMainWindow(new DataLayer.Personel());
-            }
-            Program.mainWindow = mainWindow;
-            mainWindow.InitOnShow();
+                this.Visible = false;
+                mainWindow.ShowDialog();
+                /*
+                string adminText = "admin";
+                string managerText = "manager";
+                //this.Username_TextBox.Text = managerText;
+                MainWindow mainWindow;
+                if (this.Username_TextBox.Text == adminText)
+                {
+                    mainWindow = new AdminMainWindow();
+                }
+                else if (this.Username_TextBox.Text == managerText)
+                {
+                    mainWindow = new ManagerMainWindow(new DataLayer.Personel());    
+                }
+                else
+                {
+                    mainWindow = new WorkerMainWindow(new DataLayer.Personel());
+                }
+                Program.mainWindow = mainWindow;
+                mainWindow.InitOnShow();
 
-            this.Visible = false;
-            mainWindow.ShowDialog();
-            */
+                this.Visible = false;
+                mainWindow.ShowDialog();
+                */
+            }
+            catch (ServiceException exc)
+            {
+                Alert.DisplayError(exc.Message);
+            }
         }
     }
 }
