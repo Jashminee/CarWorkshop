@@ -29,7 +29,14 @@ namespace CarWorkshop
             Personel user = new Personel();
             user.password = Password_TextBox.Text;
             user.username = Username_TextBox.Text;
-            var result = AdminService.GetPersonelWithPassword(user);
+            Personel result = new Personel();
+            try
+            {
+                result = AdminService.GetPersonelWithPassword(user);
+            }catch(ServiceException exc)
+            {
+                Alert.DisplayError(exc.Message);
+            }
             if(result==null)
             {
                 Alert.DisplayError("Invalid username or password!");

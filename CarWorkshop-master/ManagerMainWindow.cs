@@ -293,7 +293,7 @@ namespace CarWorkshop
 
         private void DeleteCustomer_Button_Click(object sender, EventArgs e)
         {
-            if (Customers_DataGridView.CurrentRow.DataBoundItem == null)
+            if (Customers_DataGridView.CurrentRow == null)
             {
                 Alert.DisplayError("No item selected!");
                 return;
