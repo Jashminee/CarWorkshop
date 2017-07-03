@@ -101,34 +101,42 @@ namespace CarWorkshop
             try
             {
                 var result = ManagerService.GetObjects(obj);
+				var x = result.ToList();
                 Objects_DataGridView.Columns.Clear();
 
-                Objects_DataGridView.DataSource = (from ob in result select new {
-                    ob.id_object,
-                    ob.Client.name,
-                    ob.Client.last_name,
-                    ObName = ob.name,
-                    ob.registration_number,
-                    ob.manufacturer,
-                    ob.model,
-                    ob.body_type,
-                    ob.year,
-                    ob.engine,
-                    ob.Object_type.name_type
-                }).ToList();
+				var data = (from ob in result
+							select new
+							{
+								ob.id_object,
+								ob.Client.name,
+								ob.Client.first_name,
+								ob.Client.last_name,
+								ObName = ob.name,
+								ob.registration_number,
+								ob.manufacturer,
+								ob.model,
+								ob.body_type,
+								ob.year,
+								ob.engine,
+								ob.Object_type.name_type
+							}).ToList();
 
-                Objects_DataGridView.Columns[0].Visible = false;
+				Objects_DataGridView.DataSource = data;
 
-                Objects_DataGridView.Columns[1].HeaderText = "Customer's name";
-                Objects_DataGridView.Columns[2].HeaderText = "Customer's surname";
-                Objects_DataGridView.Columns[3].HeaderText = "Name";
-                Objects_DataGridView.Columns[4].HeaderText = "Registration No.";
-                Objects_DataGridView.Columns[5].HeaderText = "Manufacturer";
-                Objects_DataGridView.Columns[6].HeaderText = "Model";
-                Objects_DataGridView.Columns[7].HeaderText = "Body type";
-                Objects_DataGridView.Columns[8].HeaderText = "Year";
-                Objects_DataGridView.Columns[9].HeaderText = "Engine";
-                Objects_DataGridView.Columns[10].HeaderText = "Type";
+
+				Objects_DataGridView.Columns[0].Visible = false;
+
+				Objects_DataGridView.Columns[1].HeaderText = "Company name";
+				Objects_DataGridView.Columns[2].HeaderText = "Customer's name";
+				Objects_DataGridView.Columns[3].HeaderText = "Customer's surname";
+                Objects_DataGridView.Columns[4].HeaderText = "Name";
+                Objects_DataGridView.Columns[5].HeaderText = "Registration No.";
+                Objects_DataGridView.Columns[6].HeaderText = "Manufacturer";
+                Objects_DataGridView.Columns[7].HeaderText = "Model";
+                Objects_DataGridView.Columns[8].HeaderText = "Body type";
+                Objects_DataGridView.Columns[9].HeaderText = "Year";
+                Objects_DataGridView.Columns[10].HeaderText = "Engine";
+                Objects_DataGridView.Columns[11].HeaderText = "Type";
             }
             catch (ServiceException exc)
             {
@@ -231,11 +239,11 @@ namespace CarWorkshop
             Client client = new Client();
             if(Company_CheckBox.Checked)
             {
-                client.name = Name_TextBox.Text;
+                client.name = CustomerName_TextBox.Text;
             }
             else
             {
-                client.first_name = Name_TextBox.Text;
+                client.first_name = CustomerName_TextBox.Text;
                 client.last_name = Surname_TextBox.Text;
             }
             client.city = City_TextBox.Text;
@@ -243,8 +251,16 @@ namespace CarWorkshop
             try
             {
                 var result = ManagerService.GetClients(client);
+				var result2 = result.ToList().FindAll(x =>
+				{
+					if (Company_CheckBox.Checked)
+						return !string.IsNullOrEmpty(x.name);
+					else
+						return !string.IsNullOrEmpty(x.first_name);
+				});
+
                 Customers_DataGridView.Columns.Clear();
-                Customers_DataGridView.DataSource = result.ToList();
+                Customers_DataGridView.DataSource = result2.ToList();
                 
                 if(Company_CheckBox.Checked)
                 {
@@ -403,7 +419,6 @@ namespace CarWorkshop
             }
             GetActivities(activity);
         }
-
         
         private void GetActivities(Activity activity)
         {

@@ -78,16 +78,6 @@
 			this.ObjectName_Label = new System.Windows.Forms.Label();
 			this.Name_TextBox = new System.Windows.Forms.TextBox();
 			this.Objects_DataGridView = new System.Windows.Forms.DataGridView();
-			this.NameOfCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.SurnameOfCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.NameOfObject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.RegistrationNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Manufacturer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Model = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Body = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Engine = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Request_TabPage = new System.Windows.Forms.TabPage();
 			this.DeleteRequest_Button = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
@@ -125,6 +115,17 @@
 			this.Result = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.LogOut_button = new System.Windows.Forms.Button();
 			this.WelcomeText_Label = new System.Windows.Forms.Label();
+			this.CompanyNameCollumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.NameOfCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.SurnameOfCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.NameOfObject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.RegistrationNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Manufacturer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Model = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Body = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Engine = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.ManagerMainWindow_TabControl.SuspendLayout();
 			this.Customers_TabPage.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Customers_DataGridView)).BeginInit();
@@ -142,7 +143,7 @@
 			this.ManagerMainWindow_TabControl.Controls.Add(this.Objects_TabPage);
 			this.ManagerMainWindow_TabControl.Controls.Add(this.Request_TabPage);
 			this.ManagerMainWindow_TabControl.Controls.Add(this.Activities_TabPage);
-			this.ManagerMainWindow_TabControl.Location = new System.Drawing.Point(12, 20);
+			this.ManagerMainWindow_TabControl.Location = new System.Drawing.Point(5, 20);
 			this.ManagerMainWindow_TabControl.MaximumSize = new System.Drawing.Size(760, 439);
 			this.ManagerMainWindow_TabControl.MinimumSize = new System.Drawing.Size(760, 439);
 			this.ManagerMainWindow_TabControl.Name = "ManagerMainWindow_TabControl";
@@ -378,6 +379,7 @@
 			this.Customers_DataGridView.MultiSelect = false;
 			this.Customers_DataGridView.Name = "Customers_DataGridView";
 			this.Customers_DataGridView.ReadOnly = true;
+			this.Customers_DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.Customers_DataGridView.Size = new System.Drawing.Size(752, 327);
 			this.Customers_DataGridView.StandardTab = true;
 			this.Customers_DataGridView.TabIndex = 8;
@@ -606,6 +608,7 @@
 			this.Objects_DataGridView.AllowUserToDeleteRows = false;
 			this.Objects_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.Objects_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CompanyNameCollumn,
             this.NameOfCustomer,
             this.SurnameOfCustomer,
             this.NameOfObject,
@@ -623,56 +626,6 @@
 			this.Objects_DataGridView.Size = new System.Drawing.Size(748, 323);
 			this.Objects_DataGridView.TabIndex = 19;
 			this.Objects_DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Objects_DataGridView_CellContentClick);
-			// 
-			// NameOfCustomer
-			// 
-			this.NameOfCustomer.HeaderText = "Customer\'s name";
-			this.NameOfCustomer.Name = "NameOfCustomer";
-			// 
-			// SurnameOfCustomer
-			// 
-			this.SurnameOfCustomer.HeaderText = "Customer\'s surname";
-			this.SurnameOfCustomer.Name = "SurnameOfCustomer";
-			// 
-			// NameOfObject
-			// 
-			this.NameOfObject.HeaderText = "Name";
-			this.NameOfObject.Name = "NameOfObject";
-			// 
-			// RegistrationNumber
-			// 
-			this.RegistrationNumber.HeaderText = "Registration no.";
-			this.RegistrationNumber.Name = "RegistrationNumber";
-			// 
-			// Manufacturer
-			// 
-			this.Manufacturer.HeaderText = "Manufacturer";
-			this.Manufacturer.Name = "Manufacturer";
-			// 
-			// Model
-			// 
-			this.Model.HeaderText = "Model";
-			this.Model.Name = "Model";
-			// 
-			// Body
-			// 
-			this.Body.HeaderText = "Body type";
-			this.Body.Name = "Body";
-			// 
-			// Year
-			// 
-			this.Year.HeaderText = "Year";
-			this.Year.Name = "Year";
-			// 
-			// Engine
-			// 
-			this.Engine.HeaderText = "Engine";
-			this.Engine.Name = "Engine";
-			// 
-			// Type
-			// 
-			this.Type.HeaderText = "Type";
-			this.Type.Name = "Type";
 			// 
 			// Request_TabPage
 			// 
@@ -1008,6 +961,72 @@
 			this.WelcomeText_Label.TabIndex = 19;
 			this.WelcomeText_Label.Text = "Welcome!";
 			// 
+			// CompanyNameCollumn
+			// 
+			this.CompanyNameCollumn.HeaderText = "Company name";
+			this.CompanyNameCollumn.Name = "CompanyNameCollumn";
+			this.CompanyNameCollumn.ReadOnly = true;
+			// 
+			// NameOfCustomer
+			// 
+			this.NameOfCustomer.HeaderText = "Customer\'s name";
+			this.NameOfCustomer.Name = "NameOfCustomer";
+			this.NameOfCustomer.ReadOnly = true;
+			// 
+			// SurnameOfCustomer
+			// 
+			this.SurnameOfCustomer.HeaderText = "Customer\'s surname";
+			this.SurnameOfCustomer.Name = "SurnameOfCustomer";
+			this.SurnameOfCustomer.ReadOnly = true;
+			// 
+			// NameOfObject
+			// 
+			this.NameOfObject.HeaderText = "Name";
+			this.NameOfObject.Name = "NameOfObject";
+			this.NameOfObject.ReadOnly = true;
+			// 
+			// RegistrationNumber
+			// 
+			this.RegistrationNumber.HeaderText = "Registration no.";
+			this.RegistrationNumber.Name = "RegistrationNumber";
+			this.RegistrationNumber.ReadOnly = true;
+			// 
+			// Manufacturer
+			// 
+			this.Manufacturer.HeaderText = "Manufacturer";
+			this.Manufacturer.Name = "Manufacturer";
+			this.Manufacturer.ReadOnly = true;
+			// 
+			// Model
+			// 
+			this.Model.HeaderText = "Model";
+			this.Model.Name = "Model";
+			this.Model.ReadOnly = true;
+			// 
+			// Body
+			// 
+			this.Body.HeaderText = "Body type";
+			this.Body.Name = "Body";
+			this.Body.ReadOnly = true;
+			// 
+			// Year
+			// 
+			this.Year.HeaderText = "Year";
+			this.Year.Name = "Year";
+			this.Year.ReadOnly = true;
+			// 
+			// Engine
+			// 
+			this.Engine.HeaderText = "Engine";
+			this.Engine.Name = "Engine";
+			this.Engine.ReadOnly = true;
+			// 
+			// Type
+			// 
+			this.Type.HeaderText = "Type";
+			this.Type.Name = "Type";
+			this.Type.ReadOnly = true;
+			// 
 			// ManagerMainWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1115,16 +1134,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Country;
         private System.Windows.Forms.DataGridViewTextBoxColumn PESEL;
         private System.Windows.Forms.Button DeleteRequest_Button;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameOfCustomer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SurnameOfCustomer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NameOfObject;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RegistrationNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Manufacturer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Model;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Body;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Year;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Engine;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
         private System.Windows.Forms.DataGridViewTextBoxColumn Object;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
@@ -1138,5 +1147,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Result;
-    }
+		private System.Windows.Forms.DataGridViewTextBoxColumn CompanyNameCollumn;
+		private System.Windows.Forms.DataGridViewTextBoxColumn NameOfCustomer;
+		private System.Windows.Forms.DataGridViewTextBoxColumn SurnameOfCustomer;
+		private System.Windows.Forms.DataGridViewTextBoxColumn NameOfObject;
+		private System.Windows.Forms.DataGridViewTextBoxColumn RegistrationNumber;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Manufacturer;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Model;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Body;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Year;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Engine;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Type;
+	}
 }

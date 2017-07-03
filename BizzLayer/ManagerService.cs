@@ -16,7 +16,7 @@ namespace BizzLayer
                 CarWorkshopModelContext dc = new CarWorkshopModelContext();
                 var result = from el in dc.Client
                              where
-                             (String.IsNullOrEmpty(searchCrit.name) || el.last_name.Contains(searchCrit.name))
+                             (String.IsNullOrEmpty(searchCrit.name) || el.name.Contains(searchCrit.name))
 							 &&
                              (String.IsNullOrEmpty(searchCrit.last_name) || el.last_name.Contains(searchCrit.last_name))
 							 &&
@@ -29,6 +29,8 @@ namespace BizzLayer
                              (String.IsNullOrEmpty(searchCrit.home) || el.home.Contains(searchCrit.home))
 							 &&
                              (String.IsNullOrEmpty(searchCrit.street) || el.street.Contains(searchCrit.street))
+							 &&
+							 (String.IsNullOrEmpty(searchCrit.country) || el.country.Contains(searchCrit.country))
 							 ||
                              (el.id_client == searchCrit.id_client)
                              select el;
@@ -120,9 +122,7 @@ namespace BizzLayer
                 CarWorkshopModelContext dc = new CarWorkshopModelContext();
                 var result = from el in dc.Object
                              where
-                             (String.IsNullOrEmpty(searchCrit.body_type) || el.body_type.StartsWith(searchCrit.body_type))
-							 &&
-                             (el.id_client == searchCrit.id_client)
+                             (String.IsNullOrEmpty(searchCrit.body_type) || el.body_type.StartsWith(searchCrit.body_type))	
 							 &&
                              (String.IsNullOrEmpty(searchCrit.manufacturer) || el.manufacturer.StartsWith(searchCrit.manufacturer))
 							 &&
@@ -132,10 +132,16 @@ namespace BizzLayer
 							 &&
                              (String.IsNullOrEmpty(searchCrit.other) || el.other.StartsWith(searchCrit.other))
 							 &&
-                             (String.IsNullOrEmpty(searchCrit.engine) || el.other.StartsWith(searchCrit.engine))
+                             (String.IsNullOrEmpty(searchCrit.engine) || el.engine.StartsWith(searchCrit.engine))
 							 &&
                              ((searchCrit.year == null) || (el.year == searchCrit.year))
-                             select el;
+							 &&
+							 (searchCrit.id_object == 0)
+							 ||
+							 (el.id_client == searchCrit.id_client)
+							 ||
+							 (el.id_object == searchCrit.id_object)
+							 select el;
                 return result;
             }
             catch (System.Data.Entity.Core.EntityException e)
