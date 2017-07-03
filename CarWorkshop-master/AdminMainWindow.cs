@@ -19,7 +19,7 @@ namespace CarWorkshop
             InitializeComponent();
   
             this.FormClosing += X_Clickd;
-            this.Role_ComboBox.Items.AddRange(new object[] {"Admin", "Manager", "Worker"});
+            this.Role_ComboBox.Items.AddRange(new object[] {"-", "Admin", "Manager", "Worker"});
         }
 
         private void X_Clickd(object sender, FormClosingEventArgs e)
@@ -70,7 +70,10 @@ namespace CarWorkshop
             Personel crit = new Personel();
             crit.first_name = Name_TextBox.Text;
             crit.last_name = Surname_TextBox.Text;
-            crit.role = Role_ComboBox.Text;
+			if(Role_ComboBox.Text == "-")
+				crit.role = "";
+			else
+				crit.role = Role_ComboBox.Text;
             IQueryable<Personel> results;
             try
             {
@@ -127,5 +130,5 @@ namespace CarWorkshop
             Users_DataGridView.Columns[4].HeaderText = "Date retire";
             Users_DataGridView.Columns[5].HeaderText = "Role";
         }
-    }
+	}
 }

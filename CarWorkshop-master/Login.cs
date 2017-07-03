@@ -1,4 +1,6 @@
-﻿using System;
+﻿#define LOGIN_WITH_DB
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,8 +27,8 @@ namespace CarWorkshop
 
         private void Login_Button_Click(object sender, EventArgs e)
         {
-            
-            Personel user = new Personel();
+#if LOGIN_WITH_DB
+			Personel user = new Personel();
             user.password = Password_TextBox.Text;
             user.username = Username_TextBox.Text;
             var result = AdminService.GetPersonelWithPassword(user);
@@ -46,40 +48,35 @@ namespace CarWorkshop
             {
                 mainWindow = new WorkerMainWindow(result);
             }
-
-                Program.mainWindow = mainWindow;
-                mainWindow.InitOnShow();
-
-                this.Visible = false;
-                mainWindow.ShowDialog();
-                /*
-                string adminText = "admin";
-                string managerText = "manager";
-                //this.Username_TextBox.Text = managerText;
-                MainWindow mainWindow;
-                if (this.Username_TextBox.Text == adminText)
-                {
-                    mainWindow = new AdminMainWindow();
-                }
-                else if (this.Username_TextBox.Text == managerText)
-                {
-                    mainWindow = new ManagerMainWindow(new DataLayer.Personel());    
-                }
-                else
-                {
-                    mainWindow = new WorkerMainWindow(new DataLayer.Personel());
-                }
-                Program.mainWindow = mainWindow;
-                mainWindow.InitOnShow();
-
-                this.Visible = false;
-                mainWindow.ShowDialog();
-                */
-            }
-            catch (ServiceException exc)
-            {
-                Alert.DisplayError(exc.Message);
-            }
-        }
+			
+            Program.mainWindow = mainWindow;
+            mainWindow.InitOnShow();
+			
+            this.Visible = false;
+            mainWindow.ShowDialog();
+#else
+			string adminText = "admin";
+			string managerText = "manager";
+			//this.Username_TextBox.Text = managerText;
+			MainWindow mainWindow;
+			if (this.Username_TextBox.Text == adminText)
+			{
+			    mainWindow = new AdminMainWindow();
+			}
+			else if (this.Username_TextBox.Text == managerText)
+			{
+			    mainWindow = new ManagerMainWindow(new DataLayer.Personel());    
+			}
+			else
+			{
+			    mainWindow = new WorkerMainWindow(new DataLayer.Personel());
+			}
+			Program.mainWindow = mainWindow;
+			mainWindow.InitOnShow();
+			
+			this.Visible = false;
+			mainWindow.ShowDialog();
+#endif
+		}
     }
 }

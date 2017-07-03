@@ -21,8 +21,8 @@ namespace CarWorkshop
             Application.SetCompatibleTextRenderingDefault(false);
 
             Application.Run(new Login());
-            // Application.Run(new Laboratorium());
-        }
+			// Application.Run(new Laboratorium());
+		}
 
         public static void CloseApp(Object sender, FormClosingEventArgs e)
         {

@@ -20,7 +20,8 @@ namespace CarWorkshop
             InitializeComponent();
             user = null;
             this.Role_ComboBox.Items.AddRange(new object[] { "Admin", "Manager", "Worker" });
-        }
+			Date_Retire.Checked = false;
+		}
 
         public UserEditor(Personel user)
         {
@@ -30,8 +31,16 @@ namespace CarWorkshop
             Surname_TextBox.Text = user.last_name;
             Username_TextBox.Text = user.username;
             Role_ComboBox.Text = user.role;
-            Date_Retire.Value = (System.DateTime)user.date_retire;
-            this.user = user;
+			if (user.date_retire == null)
+			{
+				Date_Retire.Checked = false;
+			}
+			else
+			{
+				Date_Retire.Checked = true;
+				Date_Retire.Value = (System.DateTime)user.date_retire;
+			}
+			this.user = user;
         }
 
         private void Save_Button_Click(object sender, EventArgs e)
@@ -84,11 +93,15 @@ namespace CarWorkshop
                 user = new Personel();
                 user.password = Password_TextBox.Text;
             }
-            user.date_retire = Date_Retire.Value;
-            user.first_name = Name_TextBox.Text;
+			if (Date_Retire.Checked)
+				user.date_retire = Date_Retire.Value;
+			else
+				user.date_retire = null;
+			user.first_name = Name_TextBox.Text;
             user.last_name = Surname_TextBox.Text;
             user.username = Username_TextBox.Text;
             user.role = Role_ComboBox.Text;
+			user.password = Password_TextBox.Text;
         }
     }
 }

@@ -16,11 +16,11 @@ namespace BizzLayer
                 CarWorkshopModelContext dc = new CarWorkshopModelContext();
                 var result = from el in dc.Personel
                              where
-                             String.IsNullOrEmpty(searchCrit.last_name) || el.last_name.StartsWith(searchCrit.last_name)
+                             (String.IsNullOrEmpty(searchCrit.last_name) || el.last_name.Contains(searchCrit.last_name))
                              &&
-                             String.IsNullOrEmpty(searchCrit.first_name) || el.first_name.StartsWith(searchCrit.first_name)
+                             (String.IsNullOrEmpty(searchCrit.first_name) || el.first_name.Contains(searchCrit.first_name))
                              &&
-                             String.IsNullOrEmpty(searchCrit.username) || el.username.StartsWith(searchCrit.username)
+                             (String.IsNullOrEmpty(searchCrit.role) || el.role.StartsWith(searchCrit.role))
                              select el;
                 return result;
             }
@@ -36,7 +36,7 @@ namespace BizzLayer
             var result = GetPersonel(searchCrit);
             result = from el in result
                      where
-                     el.date_retire > System.DateTime.Now
+					 el.date_retire == null || el.date_retire > System.DateTime.Now
                      select el;
             return result;
         }
@@ -51,7 +51,7 @@ namespace BizzLayer
                              where
                              (el.username == searchCrit.username)
                              &&
-                             el.password == searchCrit.password
+                             (el.password == searchCrit.password)
                              select el;
                 return result.SingleOrDefault<Personel>();
             }catch(System.Data.Entity.Core.EntityException e)
@@ -65,7 +65,8 @@ namespace BizzLayer
             try
             {
                 CarWorkshopModelContext dc = new CarWorkshopModelContext();
-                personel.password = Md5Hash(personel.password);
+				if(!string.IsNullOrEmpty(personel.password))
+					personel.password = Md5Hash(personel.password);
                 var res = (from el in dc.Personel
                            where el.id_personel == personel.id_personel
                            select el).SingleOrDefault();
@@ -75,7 +76,7 @@ namespace BizzLayer
                 }
                 res.first_name = personel.first_name;
                 res.last_name = personel.last_name;
-                if(res.password != personel.password)
+                if(!string.IsNullOrEmpty(personel.password) && res.password != personel.password)
                 {
                     res.password = personel.password;
                 }

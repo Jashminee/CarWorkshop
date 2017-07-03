@@ -16,21 +16,21 @@ namespace BizzLayer
                 CarWorkshopModelContext dc = new CarWorkshopModelContext();
                 var result = from el in dc.Client
                              where
-                             String.IsNullOrEmpty(searchCrit.name) || el.last_name.StartsWith(searchCrit.name)
-                             &&
-                             String.IsNullOrEmpty(searchCrit.last_name) || el.last_name.StartsWith(searchCrit.last_name)
-                             &&
-                             String.IsNullOrEmpty(searchCrit.first_name) || el.first_name.StartsWith(searchCrit.first_name)
-                             &&
-                             String.IsNullOrEmpty(searchCrit.city) || el.city.StartsWith(searchCrit.city)
-                             &&
-                             String.IsNullOrEmpty(searchCrit.flat) || el.flat.StartsWith(searchCrit.flat)
-                             &&
-                             String.IsNullOrEmpty(searchCrit.home) || el.home.StartsWith(searchCrit.home)
-                             &&
-                             String.IsNullOrEmpty(searchCrit.street) || el.street.StartsWith(searchCrit.street)
-                             ||
-                             el.id_client == searchCrit.id_client
+                             (String.IsNullOrEmpty(searchCrit.name) || el.last_name.Contains(searchCrit.name))
+							 &&
+                             (String.IsNullOrEmpty(searchCrit.last_name) || el.last_name.Contains(searchCrit.last_name))
+							 &&
+                             (String.IsNullOrEmpty(searchCrit.first_name) || el.first_name.Contains(searchCrit.first_name))
+							 &&
+                             (String.IsNullOrEmpty(searchCrit.city) || el.city.Contains(searchCrit.city))
+							 &&
+                             (String.IsNullOrEmpty(searchCrit.flat) || el.flat.Contains(searchCrit.flat))
+							 &&
+                             (String.IsNullOrEmpty(searchCrit.home) || el.home.Contains(searchCrit.home))
+							 &&
+                             (String.IsNullOrEmpty(searchCrit.street) || el.street.Contains(searchCrit.street))
+							 ||
+                             (el.id_client == searchCrit.id_client)
                              select el;
                 return result;
             }
@@ -120,21 +120,21 @@ namespace BizzLayer
                 CarWorkshopModelContext dc = new CarWorkshopModelContext();
                 var result = from el in dc.Object
                              where
-                             String.IsNullOrEmpty(searchCrit.body_type) || el.body_type.StartsWith(searchCrit.body_type)
-                             &&
-                             (searchCrit.id_client == null) || (el.id_client == searchCrit.id_client)
-                             &&
-                             String.IsNullOrEmpty(searchCrit.manufacturer) || el.manufacturer.StartsWith(searchCrit.manufacturer)
-                             &&
-                             String.IsNullOrEmpty(searchCrit.model) || el.model.StartsWith(searchCrit.model)
-                             &&
-                             String.IsNullOrEmpty(searchCrit.name) || el.name.StartsWith(searchCrit.name)
-                             &&
-                             String.IsNullOrEmpty(searchCrit.other) || el.other.StartsWith(searchCrit.other)
-                             &&
-                             String.IsNullOrEmpty(searchCrit.engine) || el.other.StartsWith(searchCrit.engine)
-                             &&
-                             (searchCrit.year == null) || (el.year == searchCrit.year)
+                             (String.IsNullOrEmpty(searchCrit.body_type) || el.body_type.StartsWith(searchCrit.body_type))
+							 &&
+                             (el.id_client == searchCrit.id_client)
+							 &&
+                             (String.IsNullOrEmpty(searchCrit.manufacturer) || el.manufacturer.StartsWith(searchCrit.manufacturer))
+							 &&
+                             (String.IsNullOrEmpty(searchCrit.model) || el.model.StartsWith(searchCrit.model))
+							 &&
+                             (String.IsNullOrEmpty(searchCrit.name) || el.name.StartsWith(searchCrit.name))
+							 &&
+                             (String.IsNullOrEmpty(searchCrit.other) || el.other.StartsWith(searchCrit.other))
+							 &&
+                             (String.IsNullOrEmpty(searchCrit.engine) || el.other.StartsWith(searchCrit.engine))
+							 &&
+                             ((searchCrit.year == null) || (el.year == searchCrit.year))
                              select el;
                 return result;
             }
@@ -223,20 +223,20 @@ namespace BizzLayer
                 CarWorkshopModelContext dc = new CarWorkshopModelContext();
                 var result = from el in dc.Request
                              where
-                             String.IsNullOrEmpty(searchCrit.description) || el.description.StartsWith(searchCrit.description)
-                             &&
-                             (searchCrit.id_object == null) || (el.id_object == searchCrit.id_object)
-                             &&
-                             (searchCrit.id_personel == null) || (el.id_personel == searchCrit.id_personel)
-                             &&
-                             String.IsNullOrEmpty(searchCrit.status) || el.status.StartsWith(searchCrit.status)
-                             &&
-                             String.IsNullOrEmpty(searchCrit.result) || el.result.StartsWith(searchCrit.result)
-                             &&
-                             (searchCrit.date_fin_cancel == null) || (el.date_fin_cancel == searchCrit.date_fin_cancel)
-                             &&
-                             (searchCrit.date_request == null) || (el.date_request == searchCrit.date_request)
-                             select el;
+                             (String.IsNullOrEmpty(searchCrit.description) || el.description.StartsWith(searchCrit.description))
+							 &&
+                             ((searchCrit.id_object == null) || (el.id_object == searchCrit.id_object))
+							 &&
+                             ((searchCrit.id_personel == null) || (el.id_personel == searchCrit.id_personel))
+							 &&
+                             (String.IsNullOrEmpty(searchCrit.status) || el.status.StartsWith(searchCrit.status))
+							 &&
+                             (String.IsNullOrEmpty(searchCrit.result) || el.result.StartsWith(searchCrit.result))
+							 &&
+                             ((searchCrit.date_fin_cancel == null) || (el.date_fin_cancel == searchCrit.date_fin_cancel))
+							 &&
+                             ((searchCrit.date_request == null) || (el.date_request == searchCrit.date_request))
+							 select el;
                 return result;
             }
             catch (System.Data.Entity.Core.EntityException e)
@@ -316,22 +316,23 @@ namespace BizzLayer
                 CarWorkshopModelContext dc = new CarWorkshopModelContext();
                 var result = from el in dc.Activity
                              where
-                             String.IsNullOrEmpty(searchCrit.description) || el.description.StartsWith(searchCrit.description)
-                             &&
-                             (searchCrit.id_personel == null) || (el.id_personel == searchCrit.id_personel)
-                             &&
-                             String.IsNullOrEmpty(searchCrit.status) || el.status.StartsWith(searchCrit.status)
-                             &&
-                             String.IsNullOrEmpty(searchCrit.result) || el.result.StartsWith(searchCrit.result)
-                             &&
-                             (searchCrit.date_fin_cancel == null) || (el.date_fin_cancel == searchCrit.date_fin_cancel)
-                             &&
-                             (searchCrit.date_request == null) || (el.date_request == searchCrit.date_request)
-                             &&
-                             String.IsNullOrEmpty(searchCrit.act_type) || el.act_type.StartsWith(searchCrit.act_type)
-                             &&
-                             (searchCrit.seq_no == null) || (el.seq_no == searchCrit.seq_no)
-                             select el;
+                             (String.IsNullOrEmpty(searchCrit.description) || el.description.StartsWith(searchCrit.description))
+							 &&
+                             ((searchCrit.id_personel == null) || (el.id_personel == searchCrit.id_personel))
+							 &&
+                             (String.IsNullOrEmpty(searchCrit.status) || el.status.StartsWith(searchCrit.status))
+							 &&
+                             (String.IsNullOrEmpty(searchCrit.result) || el.result.StartsWith(searchCrit.result))
+							 &&
+                             ((searchCrit.date_fin_cancel == null) || (el.date_fin_cancel == searchCrit.date_fin_cancel))
+							 &&
+                             ((searchCrit.date_request == null) || (el.date_request == searchCrit.date_request))
+							 &&
+                             (String.IsNullOrEmpty(searchCrit.act_type) || el.act_type.StartsWith(searchCrit.act_type))
+							 &&
+                             ((searchCrit.seq_no == null) || (el.seq_no == searchCrit.seq_no))
+
+							 select el;
                 return result;
             }
             catch (System.Data.Entity.Core.EntityException e)

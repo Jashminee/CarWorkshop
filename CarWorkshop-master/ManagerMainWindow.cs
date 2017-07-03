@@ -463,5 +463,15 @@ namespace CarWorkshop
                 Alert.DisplayError(exc.Message);
             }
         }
-    }
+
+		private void ActivityPreviousDay_Button_Click(object sender, EventArgs e)
+		{
+			ActivityDate_DateTimePicker.Value -= TimeSpan.FromDays(1);
+		}
+
+		private void ActivityNextDay_Button_Click(object sender, EventArgs e)
+		{
+			ActivityDate_DateTimePicker.Value += TimeSpan.FromDays(1);
+		}
+	}
 }
