@@ -20,7 +20,7 @@ namespace CarWorkshop
             InitializeComponent();
 
             this.FormClosing += X_Clickd;
-            Status_ComboBox.Items.AddRange(new object[] { "In progress", "Canceled", "Finished" });
+            Status_ComboBox.Items.AddRange(new object[] {"-", "In progress", "Canceled", "Finished" });
             this.user = user;
         }
 
@@ -70,8 +70,11 @@ namespace CarWorkshop
             Activity activity = new Activity();
             activity.id_personel = user.id_personel;
             activity.date_fin_cancel = DateTimePicker.Value;
-            activity.status = Status_ComboBox.Text;
-            try
+			if (Status_ComboBox.Text == "-")
+				activity.status = Status_ComboBox.Text;
+			else
+				activity.status = Status_ComboBox.Text;
+			try
             {
                 var result = ManagerService.GetActivities(activity);
                 Activity_DataGridView.Columns.Clear();

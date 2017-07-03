@@ -55,8 +55,8 @@ namespace CarWorkshop
         }
 
         private void Edit_Button_Click(object sender, EventArgs e)
-        {
-            if((Personel)Users_DataGridView.CurrentRow.DataBoundItem == null)
+        {	
+            if(Users_DataGridView.CurrentRow == null || (Personel)Users_DataGridView.CurrentRow.DataBoundItem == null)
             {
                 Alert.DisplayError("No item selected!");
                 return;
