@@ -32,6 +32,8 @@ namespace CarWorkshop
 
             AddActivity_Button.Enabled = false;
             DeleteActivity_Button.Enabled = false;
+
+			Save_Button.Text = "Save Request";
         }
 
         public RequestEditor(Request request)
@@ -81,7 +83,9 @@ namespace CarWorkshop
                 Activities_DataGridView.Columns[5].HeaderText = "Date finish";
                 Activities_DataGridView.Columns[6].HeaderText = "Status";
                 Activities_DataGridView.Columns[7].HeaderText = "Result";
-            }
+
+				Save_Button.Text = "Save and Quit";
+			}
             catch (ServiceException exc)
             {
                 Alert.DisplayError(exc.Message);
@@ -148,6 +152,7 @@ namespace CarWorkshop
                     AddActivity_Button.Enabled = true;
                     DeleteActivity_Button.Enabled = true;
                     WorkInProgres_GroupBox.Enabled = true;
+					Save_Button.Text = "Save and Quit";
                 }else
                 {
                     request.description = Description_TextBox.Text;

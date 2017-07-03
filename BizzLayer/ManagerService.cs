@@ -136,6 +136,8 @@ namespace BizzLayer
 							 &&
                              ((searchCrit.year == null) || (el.year == searchCrit.year))
 							 &&
+							 (searchCrit.id_client == 0)
+							 &&
 							 (searchCrit.id_object == 0)
 							 ||
 							 (el.id_client == searchCrit.id_client)
@@ -337,6 +339,8 @@ namespace BizzLayer
                              (String.IsNullOrEmpty(searchCrit.act_type) || el.act_type.StartsWith(searchCrit.act_type))
 							 &&
                              ((searchCrit.seq_no == null) || (el.seq_no == searchCrit.seq_no))
+							 &&
+							 (el.id_request == 0 || (el.id_request == searchCrit.id_request))
 
 							 select el;
                 return result;
