@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-<<<<<<< HEAD
 			this.ManagerMainWindow_TabControl = new System.Windows.Forms.TabControl();
 			this.Customers_TabPage = new System.Windows.Forms.TabPage();
 			this.AddObject_Button = new System.Windows.Forms.Button();
@@ -106,10 +105,10 @@
 			this.DateRequest = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dateFinCancel = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Activities_TabPage = new System.Windows.Forms.TabPage();
+			this.ActivityName_TextBox = new System.Windows.Forms.TextBox();
+			this.label2 = new System.Windows.Forms.Label();
 			this.ShowOnlyMyActivities_CheckBox = new System.Windows.Forms.CheckBox();
 			this.ShowOnlyMyActivities_Label = new System.Windows.Forms.Label();
-			this.ActivityName_Label = new System.Windows.Forms.Label();
-			this.ActivityName_TextBox = new System.Windows.Forms.TextBox();
 			this.ActivityDate_DateTimePicker = new System.Windows.Forms.DateTimePicker();
 			this.ShowActivity_Button = new System.Windows.Forms.Button();
 			this.ActivityStatus_Label = new System.Windows.Forms.Label();
@@ -366,343 +365,6 @@
 			this.Customers_DataGridView.AllowUserToOrderColumns = true;
 			this.Customers_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.Customers_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-=======
-            this.ManagerMainWindow_TabControl = new System.Windows.Forms.TabControl();
-            this.Customers_TabPage = new System.Windows.Forms.TabPage();
-            this.AddObject_Button = new System.Windows.Forms.Button();
-            this.ShowObjects_Button = new System.Windows.Forms.Button();
-            this.AddNewCustomer_Button = new System.Windows.Forms.Button();
-            this.EditCustomer_Button = new System.Windows.Forms.Button();
-            this.DeleteCustomer_Button = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.Country_TextBox = new System.Windows.Forms.TextBox();
-            this.Country_Label = new System.Windows.Forms.Label();
-            this.City_Label = new System.Windows.Forms.Label();
-            this.City_TextBox = new System.Windows.Forms.TextBox();
-            this.Company_Label = new System.Windows.Forms.Label();
-            this.Company_CheckBox = new System.Windows.Forms.CheckBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.SearchCustomers_Button = new System.Windows.Forms.Button();
-            this.Surname_TextBox = new System.Windows.Forms.TextBox();
-            this.Surname_Label = new System.Windows.Forms.Label();
-            this.CustomerName_Label = new System.Windows.Forms.Label();
-            this.CustomerName_TextBox = new System.Windows.Forms.TextBox();
-            this.Customers_DataGridView = new System.Windows.Forms.DataGridView();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.City = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Street = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumberOfHouse = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Flat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Country = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PESEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Objects_TabPage = new System.Windows.Forms.TabPage();
-            this.RegistrationNo_Label = new System.Windows.Forms.Label();
-            this.RegistrationNo_TextBox = new System.Windows.Forms.TextBox();
-            this.AddRequest_Button = new System.Windows.Forms.Button();
-            this.ShowRequests_Button = new System.Windows.Forms.Button();
-            this.EditObject_Button = new System.Windows.Forms.Button();
-            this.DeleteObject_Button = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.Model_TextBox = new System.Windows.Forms.TextBox();
-            this.Model_Label = new System.Windows.Forms.Label();
-            this.Manufacturer_Label = new System.Windows.Forms.Label();
-            this.Manufacturer_TextBox = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.SearchObjects_Button = new System.Windows.Forms.Button();
-            this.ObjectName_Label = new System.Windows.Forms.Label();
-            this.Name_TextBox = new System.Windows.Forms.TextBox();
-            this.Objects_DataGridView = new System.Windows.Forms.DataGridView();
-            this.CompanyNameCollumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameOfCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SurnameOfCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NameOfObject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RegistrationNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Manufacturer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Model = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Body = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Year = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Engine = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Request_TabPage = new System.Windows.Forms.TabPage();
-            this.DeleteRequest_Button = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.RequestDate_DateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.ShowRequest_Button = new System.Windows.Forms.Button();
-            this.RequestStatus_Label = new System.Windows.Forms.Label();
-            this.RequestStatus_ComboBox = new System.Windows.Forms.ComboBox();
-            this.SearchRequests_Button = new System.Windows.Forms.Button();
-            this.Requests_DataGridView = new System.Windows.Forms.DataGridView();
-            this.Object = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateRequest = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateFinCancel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Activities_TabPage = new System.Windows.Forms.TabPage();
-            this.ShowOnlyMyActivities_CheckBox = new System.Windows.Forms.CheckBox();
-            this.ShowOnlyMyActivities_Label = new System.Windows.Forms.Label();
-            this.ActivityDate_DateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.ShowActivity_Button = new System.Windows.Forms.Button();
-            this.ActivityStatus_Label = new System.Windows.Forms.Label();
-            this.ActivityStatus_ComboBox = new System.Windows.Forms.ComboBox();
-            this.SearchActivities_Button = new System.Windows.Forms.Button();
-            this.Activities_DataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Result = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LogOut_button = new System.Windows.Forms.Button();
-            this.WelcomeText_Label = new System.Windows.Forms.Label();
-            this.ManagerMainWindow_TabControl.SuspendLayout();
-            this.Customers_TabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Customers_DataGridView)).BeginInit();
-            this.Objects_TabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Objects_DataGridView)).BeginInit();
-            this.Request_TabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Requests_DataGridView)).BeginInit();
-            this.Activities_TabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Activities_DataGridView)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // ManagerMainWindow_TabControl
-            // 
-            this.ManagerMainWindow_TabControl.Controls.Add(this.Customers_TabPage);
-            this.ManagerMainWindow_TabControl.Controls.Add(this.Objects_TabPage);
-            this.ManagerMainWindow_TabControl.Controls.Add(this.Request_TabPage);
-            this.ManagerMainWindow_TabControl.Controls.Add(this.Activities_TabPage);
-            this.ManagerMainWindow_TabControl.Location = new System.Drawing.Point(5, 20);
-            this.ManagerMainWindow_TabControl.MaximumSize = new System.Drawing.Size(760, 439);
-            this.ManagerMainWindow_TabControl.MinimumSize = new System.Drawing.Size(760, 439);
-            this.ManagerMainWindow_TabControl.Name = "ManagerMainWindow_TabControl";
-            this.ManagerMainWindow_TabControl.SelectedIndex = 0;
-            this.ManagerMainWindow_TabControl.Size = new System.Drawing.Size(760, 439);
-            this.ManagerMainWindow_TabControl.TabIndex = 0;
-            // 
-            // Customers_TabPage
-            // 
-            this.Customers_TabPage.Controls.Add(this.AddObject_Button);
-            this.Customers_TabPage.Controls.Add(this.ShowObjects_Button);
-            this.Customers_TabPage.Controls.Add(this.AddNewCustomer_Button);
-            this.Customers_TabPage.Controls.Add(this.EditCustomer_Button);
-            this.Customers_TabPage.Controls.Add(this.DeleteCustomer_Button);
-            this.Customers_TabPage.Controls.Add(this.button8);
-            this.Customers_TabPage.Controls.Add(this.Country_TextBox);
-            this.Customers_TabPage.Controls.Add(this.Country_Label);
-            this.Customers_TabPage.Controls.Add(this.City_Label);
-            this.Customers_TabPage.Controls.Add(this.City_TextBox);
-            this.Customers_TabPage.Controls.Add(this.Company_Label);
-            this.Customers_TabPage.Controls.Add(this.Company_CheckBox);
-            this.Customers_TabPage.Controls.Add(this.button4);
-            this.Customers_TabPage.Controls.Add(this.button5);
-            this.Customers_TabPage.Controls.Add(this.button6);
-            this.Customers_TabPage.Controls.Add(this.SearchCustomers_Button);
-            this.Customers_TabPage.Controls.Add(this.Surname_TextBox);
-            this.Customers_TabPage.Controls.Add(this.Surname_Label);
-            this.Customers_TabPage.Controls.Add(this.CustomerName_Label);
-            this.Customers_TabPage.Controls.Add(this.CustomerName_TextBox);
-            this.Customers_TabPage.Controls.Add(this.Customers_DataGridView);
-            this.Customers_TabPage.Location = new System.Drawing.Point(4, 22);
-            this.Customers_TabPage.Name = "Customers_TabPage";
-            this.Customers_TabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.Customers_TabPage.Size = new System.Drawing.Size(752, 413);
-            this.Customers_TabPage.TabIndex = 0;
-            this.Customers_TabPage.Text = "Customers";
-            this.Customers_TabPage.UseVisualStyleBackColor = true;
-            // 
-            // AddObject_Button
-            // 
-            this.AddObject_Button.Location = new System.Drawing.Point(504, 390);
-            this.AddObject_Button.Name = "AddObject_Button";
-            this.AddObject_Button.Size = new System.Drawing.Size(121, 23);
-            this.AddObject_Button.TabIndex = 12;
-            this.AddObject_Button.Text = "Add new object";
-            this.AddObject_Button.UseVisualStyleBackColor = true;
-            this.AddObject_Button.Click += new System.EventHandler(this.AddObject_Button_Click);
-            // 
-            // ShowObjects_Button
-            // 
-            this.ShowObjects_Button.Location = new System.Drawing.Point(631, 390);
-            this.ShowObjects_Button.Name = "ShowObjects_Button";
-            this.ShowObjects_Button.Size = new System.Drawing.Size(121, 23);
-            this.ShowObjects_Button.TabIndex = 13;
-            this.ShowObjects_Button.Text = "Show objects";
-            this.ShowObjects_Button.UseVisualStyleBackColor = true;
-            this.ShowObjects_Button.Click += new System.EventHandler(this.ShowObjects_Button_Click);
-            // 
-            // AddNewCustomer_Button
-            // 
-            this.AddNewCustomer_Button.Location = new System.Drawing.Point(0, 390);
-            this.AddNewCustomer_Button.Name = "AddNewCustomer_Button";
-            this.AddNewCustomer_Button.Size = new System.Drawing.Size(121, 23);
-            this.AddNewCustomer_Button.TabIndex = 9;
-            this.AddNewCustomer_Button.Text = "Add new customer";
-            this.AddNewCustomer_Button.UseVisualStyleBackColor = true;
-            this.AddNewCustomer_Button.Click += new System.EventHandler(this.AddNewCustomer_Button_Click);
-            // 
-            // EditCustomer_Button
-            // 
-            this.EditCustomer_Button.Location = new System.Drawing.Point(125, 390);
-            this.EditCustomer_Button.Name = "EditCustomer_Button";
-            this.EditCustomer_Button.Size = new System.Drawing.Size(121, 23);
-            this.EditCustomer_Button.TabIndex = 10;
-            this.EditCustomer_Button.Text = "Edit customer";
-            this.EditCustomer_Button.UseVisualStyleBackColor = true;
-            this.EditCustomer_Button.Click += new System.EventHandler(this.Edit_Button_Click);
-            // 
-            // DeleteCustomer_Button
-            // 
-            this.DeleteCustomer_Button.Location = new System.Drawing.Point(252, 390);
-            this.DeleteCustomer_Button.Name = "DeleteCustomer_Button";
-            this.DeleteCustomer_Button.Size = new System.Drawing.Size(121, 23);
-            this.DeleteCustomer_Button.TabIndex = 11;
-            this.DeleteCustomer_Button.Text = "Delete customer";
-            this.DeleteCustomer_Button.UseVisualStyleBackColor = true;
-            this.DeleteCustomer_Button.Click += new System.EventHandler(this.DeleteCustomer_Button_Click);
-            // 
-            // button8
-            // 
-            this.button8.Location = new System.Drawing.Point(436, 467);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(121, 23);
-            this.button8.TabIndex = 36;
-            this.button8.Text = "See objects";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // Country_TextBox
-            // 
-            this.Country_TextBox.Location = new System.Drawing.Point(61, 29);
-            this.Country_TextBox.Name = "Country_TextBox";
-            this.Country_TextBox.Size = new System.Drawing.Size(150, 20);
-            this.Country_TextBox.TabIndex = 5;
-            // 
-            // Country_Label
-            // 
-            this.Country_Label.AutoSize = true;
-            this.Country_Label.Location = new System.Drawing.Point(6, 32);
-            this.Country_Label.Name = "Country_Label";
-            this.Country_Label.Size = new System.Drawing.Size(43, 13);
-            this.Country_Label.TabIndex = 34;
-            this.Country_Label.Text = "Country";
-            // 
-            // City_Label
-            // 
-            this.City_Label.AutoSize = true;
-            this.City_Label.Location = new System.Drawing.Point(454, 6);
-            this.City_Label.Name = "City_Label";
-            this.City_Label.Size = new System.Drawing.Size(24, 13);
-            this.City_Label.TabIndex = 33;
-            this.City_Label.Text = "City";
-            // 
-            // City_TextBox
-            // 
-            this.City_TextBox.Location = new System.Drawing.Point(484, 3);
-            this.City_TextBox.Name = "City_TextBox";
-            this.City_TextBox.Size = new System.Drawing.Size(150, 20);
-            this.City_TextBox.TabIndex = 4;
-            // 
-            // Company_Label
-            // 
-            this.Company_Label.AutoSize = true;
-            this.Company_Label.Location = new System.Drawing.Point(234, 34);
-            this.Company_Label.Name = "Company_Label";
-            this.Company_Label.Size = new System.Drawing.Size(51, 13);
-            this.Company_Label.TabIndex = 31;
-            this.Company_Label.Text = "Company";
-            // 
-            // Company_CheckBox
-            // 
-            this.Company_CheckBox.AutoSize = true;
-            this.Company_CheckBox.Location = new System.Drawing.Point(291, 34);
-            this.Company_CheckBox.Name = "Company_CheckBox";
-            this.Company_CheckBox.Size = new System.Drawing.Size(15, 14);
-            this.Company_CheckBox.TabIndex = 6;
-            this.Company_CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(6, 467);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(121, 23);
-            this.button4.TabIndex = 27;
-            this.button4.Text = "Add new customer";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(563, 467);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(121, 23);
-            this.button5.TabIndex = 26;
-            this.button5.Text = "Edit";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(690, 467);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(121, 23);
-            this.button6.TabIndex = 25;
-            this.button6.Text = "Delete";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // SearchCustomers_Button
-            // 
-            this.SearchCustomers_Button.Location = new System.Drawing.Point(631, 27);
-            this.SearchCustomers_Button.Name = "SearchCustomers_Button";
-            this.SearchCustomers_Button.Size = new System.Drawing.Size(121, 23);
-            this.SearchCustomers_Button.TabIndex = 7;
-            this.SearchCustomers_Button.Text = "Search";
-            this.SearchCustomers_Button.UseVisualStyleBackColor = true;
-            this.SearchCustomers_Button.Click += new System.EventHandler(this.SearchCustomers_Button_Click);
-            // 
-            // Surname_TextBox
-            // 
-            this.Surname_TextBox.Location = new System.Drawing.Point(289, 3);
-            this.Surname_TextBox.Name = "Surname_TextBox";
-            this.Surname_TextBox.Size = new System.Drawing.Size(150, 20);
-            this.Surname_TextBox.TabIndex = 3;
-            // 
-            // Surname_Label
-            // 
-            this.Surname_Label.AutoSize = true;
-            this.Surname_Label.Location = new System.Drawing.Point(234, 6);
-            this.Surname_Label.Name = "Surname_Label";
-            this.Surname_Label.Size = new System.Drawing.Size(49, 13);
-            this.Surname_Label.TabIndex = 20;
-            this.Surname_Label.Text = "Surname";
-            // 
-            // CustomerName_Label
-            // 
-            this.CustomerName_Label.AutoSize = true;
-            this.CustomerName_Label.Location = new System.Drawing.Point(6, 6);
-            this.CustomerName_Label.Name = "CustomerName_Label";
-            this.CustomerName_Label.Size = new System.Drawing.Size(35, 13);
-            this.CustomerName_Label.TabIndex = 19;
-            this.CustomerName_Label.Text = "Name";
-            // 
-            // CustomerName_TextBox
-            // 
-            this.CustomerName_TextBox.Location = new System.Drawing.Point(61, 3);
-            this.CustomerName_TextBox.Name = "CustomerName_TextBox";
-            this.CustomerName_TextBox.Size = new System.Drawing.Size(150, 20);
-            this.CustomerName_TextBox.TabIndex = 2;
-            // 
-            // Customers_DataGridView
-            // 
-            this.Customers_DataGridView.AllowUserToAddRows = false;
-            this.Customers_DataGridView.AllowUserToDeleteRows = false;
-            this.Customers_DataGridView.AllowUserToOrderColumns = true;
-            this.Customers_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Customers_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
->>>>>>> origin/master
             this.FirstName,
             this.LastName,
             this.City,
@@ -1133,7 +795,6 @@
             this.Column1,
             this.DateRequest,
             this.dateFinCancel});
-<<<<<<< HEAD
 			this.Requests_DataGridView.Location = new System.Drawing.Point(0, 38);
 			this.Requests_DataGridView.MultiSelect = false;
 			this.Requests_DataGridView.Name = "Requests_DataGridView";
@@ -1180,10 +841,10 @@
 			// 
 			// Activities_TabPage
 			// 
+			this.Activities_TabPage.Controls.Add(this.ActivityName_TextBox);
+			this.Activities_TabPage.Controls.Add(this.label2);
 			this.Activities_TabPage.Controls.Add(this.ShowOnlyMyActivities_CheckBox);
 			this.Activities_TabPage.Controls.Add(this.ShowOnlyMyActivities_Label);
-			this.Activities_TabPage.Controls.Add(this.ActivityName_Label);
-			this.Activities_TabPage.Controls.Add(this.ActivityName_TextBox);
 			this.Activities_TabPage.Controls.Add(this.ActivityDate_DateTimePicker);
 			this.Activities_TabPage.Controls.Add(this.ShowActivity_Button);
 			this.Activities_TabPage.Controls.Add(this.ActivityStatus_Label);
@@ -1197,6 +858,22 @@
 			this.Activities_TabPage.TabIndex = 3;
 			this.Activities_TabPage.Text = "Activities";
 			this.Activities_TabPage.UseVisualStyleBackColor = true;
+			// 
+			// ActivityName_TextBox
+			// 
+			this.ActivityName_TextBox.Location = new System.Drawing.Point(77, 3);
+			this.ActivityName_TextBox.Name = "ActivityName_TextBox";
+			this.ActivityName_TextBox.Size = new System.Drawing.Size(150, 20);
+			this.ActivityName_TextBox.TabIndex = 54;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Location = new System.Drawing.Point(11, 6);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(60, 13);
+			this.label2.TabIndex = 53;
+			this.label2.Text = "Description";
 			// 
 			// ShowOnlyMyActivities_CheckBox
 			// 
@@ -1215,22 +892,6 @@
 			this.ShowOnlyMyActivities_Label.Size = new System.Drawing.Size(116, 13);
 			this.ShowOnlyMyActivities_Label.TabIndex = 52;
 			this.ShowOnlyMyActivities_Label.Text = "Show only my activities";
-			// 
-			// ActivityName_Label
-			// 
-			this.ActivityName_Label.AutoSize = true;
-			this.ActivityName_Label.Location = new System.Drawing.Point(6, 6);
-			this.ActivityName_Label.Name = "ActivityName_Label";
-			this.ActivityName_Label.Size = new System.Drawing.Size(60, 13);
-			this.ActivityName_Label.TabIndex = 51;
-			this.ActivityName_Label.Text = "Description";
-			// 
-			// ActivityName_TextBox
-			// 
-			this.ActivityName_TextBox.Location = new System.Drawing.Point(72, 3);
-			this.ActivityName_TextBox.Name = "ActivityName_TextBox";
-			this.ActivityName_TextBox.Size = new System.Drawing.Size(150, 20);
-			this.ActivityName_TextBox.TabIndex = 30;
 			// 
 			// ActivityDate_DateTimePicker
 			// 
@@ -1255,7 +916,7 @@
 			// ActivityStatus_Label
 			// 
 			this.ActivityStatus_Label.AutoSize = true;
-			this.ActivityStatus_Label.Location = new System.Drawing.Point(6, 32);
+			this.ActivityStatus_Label.Location = new System.Drawing.Point(11, 34);
 			this.ActivityStatus_Label.Name = "ActivityStatus_Label";
 			this.ActivityStatus_Label.Size = new System.Drawing.Size(37, 13);
 			this.ActivityStatus_Label.TabIndex = 45;
@@ -1264,7 +925,7 @@
 			// ActivityStatus_ComboBox
 			// 
 			this.ActivityStatus_ComboBox.FormattingEnabled = true;
-			this.ActivityStatus_ComboBox.Location = new System.Drawing.Point(72, 29);
+			this.ActivityStatus_ComboBox.Location = new System.Drawing.Point(77, 28);
 			this.ActivityStatus_ComboBox.Name = "ActivityStatus_ComboBox";
 			this.ActivityStatus_ComboBox.Size = new System.Drawing.Size(150, 21);
 			this.ActivityStatus_ComboBox.TabIndex = 34;
@@ -1285,141 +946,6 @@
 			this.Activities_DataGridView.AllowUserToDeleteRows = false;
 			this.Activities_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.Activities_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-=======
-            this.Requests_DataGridView.Location = new System.Drawing.Point(0, 38);
-            this.Requests_DataGridView.MultiSelect = false;
-            this.Requests_DataGridView.Name = "Requests_DataGridView";
-            this.Requests_DataGridView.ReadOnly = true;
-            this.Requests_DataGridView.Size = new System.Drawing.Size(756, 343);
-            this.Requests_DataGridView.TabIndex = 27;
-            // 
-            // Object
-            // 
-            this.Object.HeaderText = "Object name";
-            this.Object.Name = "Object";
-            this.Object.ReadOnly = true;
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            this.Description.ReadOnly = true;
-            this.Description.Width = 200;
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Result";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // DateRequest
-            // 
-            this.DateRequest.HeaderText = "Date Request";
-            this.DateRequest.Name = "DateRequest";
-            this.DateRequest.ReadOnly = true;
-            // 
-            // dateFinCancel
-            // 
-            this.dateFinCancel.HeaderText = "Date finish";
-            this.dateFinCancel.Name = "dateFinCancel";
-            this.dateFinCancel.ReadOnly = true;
-            // 
-            // Activities_TabPage
-            // 
-            this.Activities_TabPage.Controls.Add(this.ShowOnlyMyActivities_CheckBox);
-            this.Activities_TabPage.Controls.Add(this.ShowOnlyMyActivities_Label);
-            this.Activities_TabPage.Controls.Add(this.ActivityDate_DateTimePicker);
-            this.Activities_TabPage.Controls.Add(this.ShowActivity_Button);
-            this.Activities_TabPage.Controls.Add(this.ActivityStatus_Label);
-            this.Activities_TabPage.Controls.Add(this.ActivityStatus_ComboBox);
-            this.Activities_TabPage.Controls.Add(this.SearchActivities_Button);
-            this.Activities_TabPage.Controls.Add(this.Activities_DataGridView);
-            this.Activities_TabPage.Location = new System.Drawing.Point(4, 22);
-            this.Activities_TabPage.Name = "Activities_TabPage";
-            this.Activities_TabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.Activities_TabPage.Size = new System.Drawing.Size(752, 413);
-            this.Activities_TabPage.TabIndex = 3;
-            this.Activities_TabPage.Text = "Activities";
-            this.Activities_TabPage.UseVisualStyleBackColor = true;
-            // 
-            // ShowOnlyMyActivities_CheckBox
-            // 
-            this.ShowOnlyMyActivities_CheckBox.AutoSize = true;
-            this.ShowOnlyMyActivities_CheckBox.Location = new System.Drawing.Point(436, 33);
-            this.ShowOnlyMyActivities_CheckBox.Name = "ShowOnlyMyActivities_CheckBox";
-            this.ShowOnlyMyActivities_CheckBox.Size = new System.Drawing.Size(15, 14);
-            this.ShowOnlyMyActivities_CheckBox.TabIndex = 35;
-            this.ShowOnlyMyActivities_CheckBox.UseVisualStyleBackColor = true;
-            // 
-            // ShowOnlyMyActivities_Label
-            // 
-            this.ShowOnlyMyActivities_Label.AutoSize = true;
-            this.ShowOnlyMyActivities_Label.Location = new System.Drawing.Point(313, 32);
-            this.ShowOnlyMyActivities_Label.Name = "ShowOnlyMyActivities_Label";
-            this.ShowOnlyMyActivities_Label.Size = new System.Drawing.Size(116, 13);
-            this.ShowOnlyMyActivities_Label.TabIndex = 52;
-            this.ShowOnlyMyActivities_Label.Text = "Show only my activities";
-            // 
-            // ActivityDate_DateTimePicker
-            // 
-            this.ActivityDate_DateTimePicker.CustomFormat = "DD.MM.YYYY";
-            this.ActivityDate_DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.ActivityDate_DateTimePicker.Location = new System.Drawing.Point(292, 6);
-            this.ActivityDate_DateTimePicker.Name = "ActivityDate_DateTimePicker";
-            this.ActivityDate_DateTimePicker.ShowCheckBox = true;
-            this.ActivityDate_DateTimePicker.Size = new System.Drawing.Size(198, 20);
-            this.ActivityDate_DateTimePicker.TabIndex = 32;
-            // 
-            // ShowActivity_Button
-            // 
-            this.ShowActivity_Button.Location = new System.Drawing.Point(625, 381);
-            this.ShowActivity_Button.Name = "ShowActivity_Button";
-            this.ShowActivity_Button.Size = new System.Drawing.Size(121, 26);
-            this.ShowActivity_Button.TabIndex = 38;
-            this.ShowActivity_Button.Text = "Show";
-            this.ShowActivity_Button.UseVisualStyleBackColor = true;
-            this.ShowActivity_Button.Click += new System.EventHandler(this.ShowActivity_Button_Click);
-            // 
-            // ActivityStatus_Label
-            // 
-            this.ActivityStatus_Label.AutoSize = true;
-            this.ActivityStatus_Label.Location = new System.Drawing.Point(11, 6);
-            this.ActivityStatus_Label.Name = "ActivityStatus_Label";
-            this.ActivityStatus_Label.Size = new System.Drawing.Size(37, 13);
-            this.ActivityStatus_Label.TabIndex = 45;
-            this.ActivityStatus_Label.Text = "Status";
-            // 
-            // ActivityStatus_ComboBox
-            // 
-            this.ActivityStatus_ComboBox.FormattingEnabled = true;
-            this.ActivityStatus_ComboBox.Location = new System.Drawing.Point(64, 3);
-            this.ActivityStatus_ComboBox.Name = "ActivityStatus_ComboBox";
-            this.ActivityStatus_ComboBox.Size = new System.Drawing.Size(150, 21);
-            this.ActivityStatus_ComboBox.TabIndex = 34;
-            // 
-            // SearchActivities_Button
-            // 
-            this.SearchActivities_Button.Location = new System.Drawing.Point(625, 28);
-            this.SearchActivities_Button.Name = "SearchActivities_Button";
-            this.SearchActivities_Button.Size = new System.Drawing.Size(121, 21);
-            this.SearchActivities_Button.TabIndex = 36;
-            this.SearchActivities_Button.Text = "Search";
-            this.SearchActivities_Button.UseVisualStyleBackColor = true;
-            this.SearchActivities_Button.Click += new System.EventHandler(this.SearchActivities_Button_Click);
-            // 
-            // Activities_DataGridView
-            // 
-            this.Activities_DataGridView.AllowUserToAddRows = false;
-            this.Activities_DataGridView.AllowUserToDeleteRows = false;
-            this.Activities_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Activities_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
->>>>>>> origin/master
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn2,
@@ -1625,5 +1151,7 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn Year;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Engine;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Type;
+		private System.Windows.Forms.TextBox ActivityName_TextBox;
+		private System.Windows.Forms.Label label2;
 	}
 }

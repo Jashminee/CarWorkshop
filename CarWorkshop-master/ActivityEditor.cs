@@ -94,7 +94,7 @@ namespace CarWorkshop
                 {
                     activity.id_request = request.id_request;
                     activity.status = "In progress";
-                    activity.id_personel = request.id_personel;
+                    //activity.id_personel = request.id_personel;
                     activity.date_request = System.DateTime.Now;
                     ManagerService.NewActivity(activity);
                 }

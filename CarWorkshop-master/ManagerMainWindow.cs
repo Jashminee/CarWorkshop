@@ -422,6 +422,7 @@ namespace CarWorkshop
                 activity.id_personel = user.id_personel;
             }
 			activity.description = ActivityName_TextBox.Text;
+
 			GetActivities(activity);
         }
         

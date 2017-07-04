@@ -69,9 +69,12 @@ namespace CarWorkshop
         {
             Activity activity = new Activity();
             activity.id_personel = user.id_personel;
-            activity.date_fin_cancel = DateTimePicker.Value;
+			if(DateTimePicker.Checked)
+				activity.date_request = DateTimePicker.Value;
+			else
+				activity.date_request = null;
 			if (Status_ComboBox.Text == "-")
-				activity.status = Status_ComboBox.Text;
+				activity.status = null;
 			else
 				activity.status = Status_ComboBox.Text;
 			try

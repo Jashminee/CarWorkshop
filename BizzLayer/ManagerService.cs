@@ -348,7 +348,8 @@ namespace BizzLayer
 							 &&
                              ((searchCrit.seq_no == null) || (el.seq_no == searchCrit.seq_no))
 							 &&
-<<<<<<< HEAD
+							 ((searchCrit.id_activity == 0) || (el.id_activity == searchCrit.id_activity))
+							 &&
 							 (searchCrit.id_request == null || searchCrit.id_request == 0 || (el.id_request == searchCrit.id_request))
 							 &&
 							 ((searchCrit.date_request == null) || (
@@ -358,12 +359,6 @@ namespace BizzLayer
 																  	 &&
 																  	 (el.date_request.Value.Day == searchCrit.date_request.Value.Day)
 																  ))
-=======
-							 ((searchCrit.id_request == null) || (el.id_request == searchCrit.id_request))
-                             &&
-                             ((searchCrit.id_activity == 0)||(el.id_activity==searchCrit.id_activity))
->>>>>>> origin/master
-
 							 select el;
                 return result;
             }

@@ -148,7 +148,8 @@ namespace CarWorkshop
                     request.id_object = obj.id_object;
                     request.status = Status_TextBox.Text;
                     request.result = Result_textBox.Text;
-                    request.date_request = System.DateTime.Now;
+					request.id_personel = Login.LoggedUser.id_personel;
+					request.date_request = System.DateTime.Now;
                     ManagerService.NewRequest(request);
                     AddActivity_Button.Enabled = true;
                     DeleteActivity_Button.Enabled = true;

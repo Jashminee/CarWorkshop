@@ -16,6 +16,15 @@ namespace CarWorkshop
 {
     public partial class Login : Form
     {
+		static Personel _LoggedUser;
+		public static Personel LoggedUser
+		{
+			get
+			{
+				return _LoggedUser;
+			}
+		}
+
         public Login()
         {
             InitializeComponent();
@@ -48,8 +57,10 @@ namespace CarWorkshop
             {
                 mainWindow = new WorkerMainWindow(result);
             }
-			
-            Program.mainWindow = mainWindow;
+
+			_LoggedUser = user;
+
+			Program.mainWindow = mainWindow;
             mainWindow.InitOnShow();
 			
             this.Visible = false;
