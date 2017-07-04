@@ -43,7 +43,11 @@ namespace CarWorkshop
             {
                 var result = AdminService.GetPersonelActive(new Personel()).ToList();
                 workers = result.ToList();
-                string [] workersArray = (from el in result select el.first_name).ToArray();
+				string[] workersArray = (
+					from el in result
+					where !el.role.StartsWith("Admin")
+					select el.first_name
+					).ToArray();
                 for(int i = 0; i < workersArray.Length; i++)
                 {
                     workersArray[i] += (" " + workers[i].last_name);

@@ -41,7 +41,7 @@ namespace CarWorkshop
             user.password = Password_TextBox.Text;
             user.username = Username_TextBox.Text;
             var result = AdminService.GetPersonelWithPassword(user);
-            if(result==null)
+            if(result==null || result.date_retire < DateTime.Now)
             {
                 Alert.DisplayError("Invalid username or password!");
                 return;

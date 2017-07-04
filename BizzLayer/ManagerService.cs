@@ -368,28 +368,28 @@ namespace BizzLayer
             }
         }
 
-        public static void UpdateActivity(Activity request)
+        public static void UpdateActivity(Activity activity)
         {
             try
             {
                 CarWorkshopModelContext dc = new CarWorkshopModelContext();
                 var result = (from el in dc.Activity
                               where
-                              el.id_request == request.id_request
+                              el.id_request == activity.id_request
                               select el).SingleOrDefault();
                 if (result == null)
                 {
                     return;
                 }
-                result.date_fin_cancel = request.date_fin_cancel;
-                result.date_request = request.date_request;
-                result.description = request.description;
-                result.id_activity = request.id_activity;
-                result.id_personel = request.id_personel;
-                result.result = request.result;
-                result.status = request.status;
-                result.act_type = request.act_type;
-                result.seq_no = request.seq_no;
+                result.date_fin_cancel = activity.date_fin_cancel;
+                result.date_request = activity.date_request;
+                result.description = activity.description;
+                result.id_activity = activity.id_activity;
+                result.id_personel = activity.id_personel;
+                result.result = activity.result;
+                result.status = activity.status;
+                result.act_type = activity.act_type;
+                result.seq_no = activity.seq_no;
                 dc.SaveChanges();
             }
             catch (System.Data.Entity.Core.EntityException e)
