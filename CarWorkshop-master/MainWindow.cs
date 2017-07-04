@@ -9,6 +9,8 @@ namespace CarWorkshop
 {
     public class MainWindow : Form
     {
-        public virtual void InitOnShow() { }
+		protected DataLayer.Personel user;
+
+		public virtual void InitOnShow() { }
     }
 }

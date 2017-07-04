@@ -1,4 +1,4 @@
-﻿//#define LOGIN_WITH_DB
+﻿//#define LOGIN_WITHOUT_DB
 
 using System;
 using System.Collections.Generic;
@@ -27,7 +27,7 @@ namespace CarWorkshop
 
         private void Login_Button_Click(object sender, EventArgs e)
         {
-#if LOGIN_WITH_DB
+#if !LOGIN_WITHOUT_DB
 			Personel user = new Personel();
             user.password = Password_TextBox.Text;
             user.username = Username_TextBox.Text;
@@ -40,7 +40,7 @@ namespace CarWorkshop
             MainWindow mainWindow;
             if (result.role.StartsWith("Admin"))
             {
-                mainWindow = new AdminMainWindow();
+                mainWindow = new AdminMainWindow(result);
             } else if (result.role.StartsWith("Manager"))
             {
                 mainWindow = new ManagerMainWindow(result);

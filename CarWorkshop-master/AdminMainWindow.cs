@@ -14,10 +14,10 @@ namespace CarWorkshop
 {
     public partial class AdminMainWindow : MainWindow
     {
-        public AdminMainWindow()
+        public AdminMainWindow(Personel user)
         {
             InitializeComponent();
-  
+			this.user = user;
             this.FormClosing += X_Clickd;
             this.Role_ComboBox.Items.AddRange(new object[] {"-", "Admin", "Manager", "Worker"});
         }
@@ -39,10 +39,11 @@ namespace CarWorkshop
     
         public override void InitOnShow()
         {
-            this.WelcomeText_Label.Text = "Hi, you are logged in as [username]";
-        }
+			this.WelcomeText_Label.Text = "Hi, you are logged in as " + user.username;
+			//this.WelcomeText_Label.Text = string.Format("Hi, you are logged in as [{0}]", user.username);
+		}
 
-        private void LogOut_Button_Click(object sender, EventArgs e)
+		private void LogOut_Button_Click(object sender, EventArgs e)
         {
             Program.loginWindow.Visible = true;
             this.Visible = false;
