@@ -1,4 +1,4 @@
-﻿#define LOGIN_WITH_DB
+﻿//#define LOGIN_WITH_DB
 
 using System;
 using System.Collections.Generic;

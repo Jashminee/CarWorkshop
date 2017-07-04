@@ -234,7 +234,9 @@ namespace BizzLayer
                              (String.IsNullOrEmpty(searchCrit.description) || el.description.StartsWith(searchCrit.description))
 							 &&
                              ((searchCrit.id_object == null) || (el.id_object == searchCrit.id_object))
-							 &&
+                             &&
+                             ((searchCrit.id_request == 0) || (el.id_request == searchCrit.id_request))
+                             &&
                              ((searchCrit.id_personel == null) || (el.id_personel == searchCrit.id_personel))
 							 &&
                              (String.IsNullOrEmpty(searchCrit.status) || el.status.StartsWith(searchCrit.status))

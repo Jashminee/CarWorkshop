@@ -32,6 +32,7 @@ namespace CarWorkshop
 
             AddActivity_Button.Enabled = false;
             DeleteActivity_Button.Enabled = false;
+            WorkInProgres_GroupBox.Enabled = false;
 
 			Save_Button.Text = "Save Request";
         }
