@@ -167,8 +167,6 @@ namespace CarWorkshop
             {
                 Alert.DisplayError(exc.Message);
             }
-
-
         }
 
         private void AddRequest_Button_Click(object sender, EventArgs e)
@@ -372,7 +370,9 @@ namespace CarWorkshop
             try
             {
                 var result = ManagerService.GetRequests(request);
-                Requests_DataGridView.Columns.Clear();
+				var r = result.ToList();
+
+				Requests_DataGridView.Columns.Clear();
                 Requests_DataGridView.DataSource = (from el in result
                                                     select new
                                                     {
@@ -423,7 +423,8 @@ namespace CarWorkshop
             {
                 activity.id_personel = user.id_personel;
             }
-            GetActivities(activity);
+			activity.description = ActivityName_TextBox.Text;
+			GetActivities(activity);
         }
         
         private void GetActivities(Activity activity)

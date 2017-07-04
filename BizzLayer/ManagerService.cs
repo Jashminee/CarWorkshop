@@ -245,7 +245,15 @@ namespace BizzLayer
 							 &&
                              ((searchCrit.date_fin_cancel == null) || (el.date_fin_cancel == searchCrit.date_fin_cancel))
 							 &&
-                             ((searchCrit.date_request == null) || (el.date_request == searchCrit.date_request))
+                             ((searchCrit.date_request == null) || 
+							 (
+								 (el.date_request.Value.Year == searchCrit.date_request.Value.Year)
+								 &&
+								 (el.date_request.Value.Month == searchCrit.date_request.Value.Month)
+								 &&
+								 (el.date_request.Value.Day == searchCrit.date_request.Value.Day)
+							 ))
+							 
 							 select el;
                 return result;
             }
@@ -336,13 +344,19 @@ namespace BizzLayer
 							 &&
                              ((searchCrit.date_fin_cancel == null) || (el.date_fin_cancel == searchCrit.date_fin_cancel))
 							 &&
-                             ((searchCrit.date_request == null) || (el.date_request == searchCrit.date_request))
-							 &&
                              (String.IsNullOrEmpty(searchCrit.act_type) || el.act_type.StartsWith(searchCrit.act_type))
 							 &&
                              ((searchCrit.seq_no == null) || (el.seq_no == searchCrit.seq_no))
 							 &&
-							 (el.id_request == 0 || (el.id_request == searchCrit.id_request))
+							 (searchCrit.id_request == null || searchCrit.id_request == 0 || (el.id_request == searchCrit.id_request))
+							 &&
+							 ((searchCrit.date_request == null) || (
+							 									  	 (el.date_request.Value.Year == searchCrit.date_request.Value.Year)
+																  	 &&
+																  	 (el.date_request.Value.Month == searchCrit.date_request.Value.Month)
+																  	 &&
+																  	 (el.date_request.Value.Day == searchCrit.date_request.Value.Day)
+																  ))
 
 							 select el;
                 return result;
