@@ -342,7 +342,9 @@ namespace BizzLayer
 							 &&
                              ((searchCrit.seq_no == null) || (el.seq_no == searchCrit.seq_no))
 							 &&
-							 (el.id_request == 0 || (el.id_request == searchCrit.id_request))
+							 ((searchCrit.id_request == null) || (el.id_request == searchCrit.id_request))
+                             &&
+                             ((searchCrit.id_activity == 0)||(el.id_activity==searchCrit.id_activity))
 
 							 select el;
                 return result;

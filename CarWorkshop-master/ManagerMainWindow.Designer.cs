@@ -107,8 +107,6 @@
             this.Activities_TabPage = new System.Windows.Forms.TabPage();
             this.ShowOnlyMyActivities_CheckBox = new System.Windows.Forms.CheckBox();
             this.ShowOnlyMyActivities_Label = new System.Windows.Forms.Label();
-            this.ActivityName_Label = new System.Windows.Forms.Label();
-            this.ActivityName_TextBox = new System.Windows.Forms.TextBox();
             this.ActivityDate_DateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.ShowActivity_Button = new System.Windows.Forms.Button();
             this.ActivityStatus_Label = new System.Windows.Forms.Label();
@@ -843,8 +841,6 @@
             // 
             this.Activities_TabPage.Controls.Add(this.ShowOnlyMyActivities_CheckBox);
             this.Activities_TabPage.Controls.Add(this.ShowOnlyMyActivities_Label);
-            this.Activities_TabPage.Controls.Add(this.ActivityName_Label);
-            this.Activities_TabPage.Controls.Add(this.ActivityName_TextBox);
             this.Activities_TabPage.Controls.Add(this.ActivityDate_DateTimePicker);
             this.Activities_TabPage.Controls.Add(this.ShowActivity_Button);
             this.Activities_TabPage.Controls.Add(this.ActivityStatus_Label);
@@ -877,22 +873,6 @@
             this.ShowOnlyMyActivities_Label.TabIndex = 52;
             this.ShowOnlyMyActivities_Label.Text = "Show only my activities";
             // 
-            // ActivityName_Label
-            // 
-            this.ActivityName_Label.AutoSize = true;
-            this.ActivityName_Label.Location = new System.Drawing.Point(6, 6);
-            this.ActivityName_Label.Name = "ActivityName_Label";
-            this.ActivityName_Label.Size = new System.Drawing.Size(35, 13);
-            this.ActivityName_Label.TabIndex = 51;
-            this.ActivityName_Label.Text = "Name";
-            // 
-            // ActivityName_TextBox
-            // 
-            this.ActivityName_TextBox.Location = new System.Drawing.Point(59, 3);
-            this.ActivityName_TextBox.Name = "ActivityName_TextBox";
-            this.ActivityName_TextBox.Size = new System.Drawing.Size(150, 20);
-            this.ActivityName_TextBox.TabIndex = 30;
-            // 
             // ActivityDate_DateTimePicker
             // 
             this.ActivityDate_DateTimePicker.CustomFormat = "DD.MM.YYYY";
@@ -916,7 +896,7 @@
             // ActivityStatus_Label
             // 
             this.ActivityStatus_Label.AutoSize = true;
-            this.ActivityStatus_Label.Location = new System.Drawing.Point(6, 32);
+            this.ActivityStatus_Label.Location = new System.Drawing.Point(11, 6);
             this.ActivityStatus_Label.Name = "ActivityStatus_Label";
             this.ActivityStatus_Label.Size = new System.Drawing.Size(37, 13);
             this.ActivityStatus_Label.TabIndex = 45;
@@ -925,7 +905,7 @@
             // ActivityStatus_ComboBox
             // 
             this.ActivityStatus_ComboBox.FormattingEnabled = true;
-            this.ActivityStatus_ComboBox.Location = new System.Drawing.Point(59, 29);
+            this.ActivityStatus_ComboBox.Location = new System.Drawing.Point(64, 3);
             this.ActivityStatus_ComboBox.Name = "ActivityStatus_ComboBox";
             this.ActivityStatus_ComboBox.Size = new System.Drawing.Size(150, 21);
             this.ActivityStatus_ComboBox.TabIndex = 34;
@@ -1111,8 +1091,6 @@
         private System.Windows.Forms.TabPage Activities_TabPage;
         private System.Windows.Forms.CheckBox ShowOnlyMyActivities_CheckBox;
         private System.Windows.Forms.Label ShowOnlyMyActivities_Label;
-        private System.Windows.Forms.Label ActivityName_Label;
-        private System.Windows.Forms.TextBox ActivityName_TextBox;
         private System.Windows.Forms.DateTimePicker ActivityDate_DateTimePicker;
         private System.Windows.Forms.Button ShowActivity_Button;
         private System.Windows.Forms.Label ActivityStatus_Label;
