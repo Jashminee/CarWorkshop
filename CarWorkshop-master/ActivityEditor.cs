@@ -56,12 +56,12 @@ namespace CarWorkshop
 				string[] workersArray = (
 					from el in result
 					where !el.role.StartsWith("Admin")
-					select el.first_name
+					select el.first_name + " " + el.last_name
 					).ToArray();
-                for(int i = 0; i < workersArray.Length; i++)
-                {
-                    workersArray[i] += (" " + workers[i].last_name);
-                }
+                //for(int i = 0; i < workersArray.Length; i++)
+                //{
+                //    workersArray[i] += (" " + workers[i].last_name);
+                //}
                 return workersArray;
             } catch (ServiceException e)
             {

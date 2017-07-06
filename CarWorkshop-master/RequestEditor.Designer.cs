@@ -249,14 +249,14 @@
 			this.Request_GroupBox.Controls.Add(this.Activities_DataGridView);
 			this.Request_GroupBox.Location = new System.Drawing.Point(13, 153);
 			this.Request_GroupBox.Name = "Request_GroupBox";
-			this.Request_GroupBox.Size = new System.Drawing.Size(559, 509);
+			this.Request_GroupBox.Size = new System.Drawing.Size(559, 381);
 			this.Request_GroupBox.TabIndex = 54;
 			this.Request_GroupBox.TabStop = false;
 			this.Request_GroupBox.Text = "Request";
 			// 
 			// ShowActivity_Button
 			// 
-			this.ShowActivity_Button.Location = new System.Drawing.Point(247, 473);
+			this.ShowActivity_Button.Location = new System.Drawing.Point(247, 347);
 			this.ShowActivity_Button.Name = "ShowActivity_Button";
 			this.ShowActivity_Button.Size = new System.Drawing.Size(121, 23);
 			this.ShowActivity_Button.TabIndex = 65;
@@ -267,7 +267,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(22, 138);
+			this.label1.Location = new System.Drawing.Point(22, 97);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(37, 13);
 			this.label1.TabIndex = 64;
@@ -278,10 +278,10 @@
 			// 
 			this.Result_textBox.BackColor = System.Drawing.SystemColors.Control;
 			this.Result_textBox.Enabled = false;
-			this.Result_textBox.Location = new System.Drawing.Point(25, 154);
+			this.Result_textBox.Location = new System.Drawing.Point(25, 113);
 			this.Result_textBox.Multiline = true;
 			this.Result_textBox.Name = "Result_textBox";
-			this.Result_textBox.Size = new System.Drawing.Size(498, 76);
+			this.Result_textBox.Size = new System.Drawing.Size(498, 63);
 			this.Result_textBox.TabIndex = 63;
 			// 
 			// Description_Label
@@ -298,12 +298,12 @@
 			this.Description_TextBox.Location = new System.Drawing.Point(25, 32);
 			this.Description_TextBox.Multiline = true;
 			this.Description_TextBox.Name = "Description_TextBox";
-			this.Description_TextBox.Size = new System.Drawing.Size(498, 76);
+			this.Description_TextBox.Size = new System.Drawing.Size(498, 62);
 			this.Description_TextBox.TabIndex = 62;
 			// 
 			// DeleteActivity_Button
 			// 
-			this.DeleteActivity_Button.Location = new System.Drawing.Point(136, 473);
+			this.DeleteActivity_Button.Location = new System.Drawing.Point(136, 347);
 			this.DeleteActivity_Button.Name = "DeleteActivity_Button";
 			this.DeleteActivity_Button.Size = new System.Drawing.Size(105, 23);
 			this.DeleteActivity_Button.TabIndex = 58;
@@ -313,7 +313,7 @@
 			// 
 			// AddActivity_Button
 			// 
-			this.AddActivity_Button.Location = new System.Drawing.Point(25, 473);
+			this.AddActivity_Button.Location = new System.Drawing.Point(25, 347);
 			this.AddActivity_Button.Name = "AddActivity_Button";
 			this.AddActivity_Button.Size = new System.Drawing.Size(105, 23);
 			this.AddActivity_Button.TabIndex = 57;
@@ -324,7 +324,7 @@
 			// Activities_Label
 			// 
 			this.Activities_Label.AutoSize = true;
-			this.Activities_Label.Location = new System.Drawing.Point(22, 245);
+			this.Activities_Label.Location = new System.Drawing.Point(22, 179);
 			this.Activities_Label.Name = "Activities_Label";
 			this.Activities_Label.Size = new System.Drawing.Size(49, 13);
 			this.Activities_Label.TabIndex = 54;
@@ -341,9 +341,9 @@
             this.DateFinish,
             this.Status,
             this.Result1});
-			this.Activities_DataGridView.Location = new System.Drawing.Point(25, 261);
+			this.Activities_DataGridView.Location = new System.Drawing.Point(25, 195);
 			this.Activities_DataGridView.Name = "Activities_DataGridView";
-			this.Activities_DataGridView.Size = new System.Drawing.Size(498, 196);
+			this.Activities_DataGridView.Size = new System.Drawing.Size(498, 146);
 			this.Activities_DataGridView.TabIndex = 53;
 			// 
 			// Seq_no
@@ -386,9 +386,9 @@
 			// 
 			// Save_Button
 			// 
-			this.Save_Button.Location = new System.Drawing.Point(441, 749);
+			this.Save_Button.Location = new System.Drawing.Point(441, 615);
 			this.Save_Button.Name = "Save_Button";
-			this.Save_Button.Size = new System.Drawing.Size(125, 23);
+			this.Save_Button.Size = new System.Drawing.Size(125, 29);
 			this.Save_Button.TabIndex = 59;
 			this.Save_Button.Text = "Save";
 			this.Save_Button.UseVisualStyleBackColor = true;
@@ -400,9 +400,9 @@
 			this.WorkInProgres_GroupBox.Controls.Add(this.button1);
 			this.WorkInProgres_GroupBox.Controls.Add(this.Finish_Button);
 			this.WorkInProgres_GroupBox.Controls.Add(this.StartWork_Button);
-			this.WorkInProgres_GroupBox.Location = new System.Drawing.Point(13, 668);
+			this.WorkInProgres_GroupBox.Location = new System.Drawing.Point(13, 540);
 			this.WorkInProgres_GroupBox.Name = "WorkInProgres_GroupBox";
-			this.WorkInProgres_GroupBox.Size = new System.Drawing.Size(559, 65);
+			this.WorkInProgres_GroupBox.Size = new System.Drawing.Size(559, 69);
 			this.WorkInProgres_GroupBox.TabIndex = 55;
 			this.WorkInProgres_GroupBox.TabStop = false;
 			this.WorkInProgres_GroupBox.Text = "Status";
@@ -451,7 +451,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(584, 784);
+			this.ClientSize = new System.Drawing.Size(584, 655);
 			this.Controls.Add(this.WorkInProgres_GroupBox);
 			this.Controls.Add(this.Request_GroupBox);
 			this.Controls.Add(this.Save_Button);

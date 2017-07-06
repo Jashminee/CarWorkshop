@@ -58,7 +58,7 @@ namespace CarWorkshop
                 mainWindow = new WorkerMainWindow(result);
             }
 
-			_LoggedUser = user;
+			_LoggedUser = result;
 
 			Program.mainWindow = mainWindow;
             mainWindow.InitOnShow();
