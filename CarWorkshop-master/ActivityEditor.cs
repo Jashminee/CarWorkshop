@@ -52,7 +52,7 @@ namespace CarWorkshop
             try
             {
                 var result = AdminService.GetPersonelActive(new Personel()).ToList();
-                workers = result.ToList();
+                workers = result.Where(x => !x.role.StartsWith("Admin")).ToList();
 				string[] workersArray = (
 					from el in result
 					where !el.role.StartsWith("Admin")
