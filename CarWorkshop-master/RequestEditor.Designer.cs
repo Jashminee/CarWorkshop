@@ -55,19 +55,18 @@
 			this.AddActivity_Button = new System.Windows.Forms.Button();
 			this.Activities_Label = new System.Windows.Forms.Label();
 			this.Activities_DataGridView = new System.Windows.Forms.DataGridView();
-			this.Seq_no = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.DateRequest = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.DateFinish = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Result1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Save_Button = new System.Windows.Forms.Button();
 			this.WorkInProgres_GroupBox = new System.Windows.Forms.GroupBox();
 			this.Status_TextBox = new System.Windows.Forms.TextBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.Finish_Button = new System.Windows.Forms.Button();
 			this.StartWork_Button = new System.Windows.Forms.Button();
+			this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.DateRequest = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.DateFinish = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Result1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Object_GroupBox.SuspendLayout();
 			this.Request_GroupBox.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Activities_DataGridView)).BeginInit();
@@ -334,7 +333,6 @@
 			// 
 			this.Activities_DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.Activities_DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Seq_no,
             this.Description,
             this.Type,
             this.DateRequest,
@@ -343,46 +341,9 @@
             this.Result1});
 			this.Activities_DataGridView.Location = new System.Drawing.Point(25, 195);
 			this.Activities_DataGridView.Name = "Activities_DataGridView";
+			this.Activities_DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.Activities_DataGridView.Size = new System.Drawing.Size(498, 146);
 			this.Activities_DataGridView.TabIndex = 53;
-			// 
-			// Seq_no
-			// 
-			this.Seq_no.HeaderText = "Seq";
-			this.Seq_no.Name = "Seq_no";
-			this.Seq_no.Width = 30;
-			// 
-			// Description
-			// 
-			this.Description.HeaderText = "Description";
-			this.Description.Name = "Description";
-			this.Description.Width = 150;
-			// 
-			// Type
-			// 
-			this.Type.HeaderText = "Type";
-			this.Type.Name = "Type";
-			// 
-			// DateRequest
-			// 
-			this.DateRequest.HeaderText = "Date";
-			this.DateRequest.Name = "DateRequest";
-			// 
-			// DateFinish
-			// 
-			this.DateFinish.HeaderText = "Date Finish";
-			this.DateFinish.Name = "DateFinish";
-			// 
-			// Status
-			// 
-			this.Status.HeaderText = "Status";
-			this.Status.Name = "Status";
-			this.Status.Width = 75;
-			// 
-			// Result1
-			// 
-			this.Result1.HeaderText = "Result";
-			this.Result1.Name = "Result1";
 			// 
 			// Save_Button
 			// 
@@ -447,6 +408,38 @@
 			this.StartWork_Button.UseVisualStyleBackColor = true;
 			this.StartWork_Button.Click += new System.EventHandler(this.StartWork_Button_Click);
 			// 
+			// Description
+			// 
+			this.Description.HeaderText = "Description";
+			this.Description.Name = "Description";
+			this.Description.Width = 150;
+			// 
+			// Type
+			// 
+			this.Type.HeaderText = "Type";
+			this.Type.Name = "Type";
+			// 
+			// DateRequest
+			// 
+			this.DateRequest.HeaderText = "Date";
+			this.DateRequest.Name = "DateRequest";
+			// 
+			// DateFinish
+			// 
+			this.DateFinish.HeaderText = "Date Finish";
+			this.DateFinish.Name = "DateFinish";
+			// 
+			// Status
+			// 
+			this.Status.HeaderText = "Status";
+			this.Status.Name = "Status";
+			this.Status.Width = 75;
+			// 
+			// Result1
+			// 
+			this.Result1.HeaderText = "Result";
+			this.Result1.Name = "Result1";
+			// 
 			// RequestEditor
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,12 +499,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox Result_textBox;
         private System.Windows.Forms.Button ShowActivity_Button;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Seq_no;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Type;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateRequest;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateFinish;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Result1;
-    }
+		private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Type;
+		private System.Windows.Forms.DataGridViewTextBoxColumn DateRequest;
+		private System.Windows.Forms.DataGridViewTextBoxColumn DateFinish;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Result1;
+	}
 }

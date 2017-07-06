@@ -38,7 +38,6 @@
 			this.Role_Label = new System.Windows.Forms.Label();
 			this.Role_ComboBox = new System.Windows.Forms.ComboBox();
 			this.Save_Button = new System.Windows.Forms.Button();
-			this.Cancel_Button = new System.Windows.Forms.Button();
 			this.Password_TextBox = new System.Windows.Forms.TextBox();
 			this.Password_Label = new System.Windows.Forms.Label();
 			this.Date_Retire = new System.Windows.Forms.DateTimePicker();
@@ -128,16 +127,6 @@
 			this.Save_Button.UseVisualStyleBackColor = true;
 			this.Save_Button.Click += new System.EventHandler(this.Save_Button_Click);
 			// 
-			// Cancel_Button
-			// 
-			this.Cancel_Button.Location = new System.Drawing.Point(12, 176);
-			this.Cancel_Button.Name = "Cancel_Button";
-			this.Cancel_Button.Size = new System.Drawing.Size(75, 23);
-			this.Cancel_Button.TabIndex = 7;
-			this.Cancel_Button.Text = "Cancel";
-			this.Cancel_Button.UseVisualStyleBackColor = true;
-			this.Cancel_Button.Click += new System.EventHandler(this.Cancel_Button_Click);
-			// 
 			// Password_TextBox
 			// 
 			this.Password_TextBox.Location = new System.Drawing.Point(82, 94);
@@ -172,7 +161,6 @@
 			this.Controls.Add(this.Date_Retire);
 			this.Controls.Add(this.Password_TextBox);
 			this.Controls.Add(this.Password_Label);
-			this.Controls.Add(this.Cancel_Button);
 			this.Controls.Add(this.Save_Button);
 			this.Controls.Add(this.Role_ComboBox);
 			this.Controls.Add(this.Role_Label);
@@ -205,7 +193,6 @@
         private System.Windows.Forms.Label Role_Label;
         private System.Windows.Forms.ComboBox Role_ComboBox;
         private System.Windows.Forms.Button Save_Button;
-        private System.Windows.Forms.Button Cancel_Button;
         private System.Windows.Forms.TextBox Password_TextBox;
         private System.Windows.Forms.Label Password_Label;
         private System.Windows.Forms.DateTimePicker Date_Retire;

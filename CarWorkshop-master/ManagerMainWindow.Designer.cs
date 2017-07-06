@@ -584,7 +584,7 @@
 			// 
 			// SearchObjects_Button
 			// 
-			this.SearchObjects_Button.Location = new System.Drawing.Point(631, 32);
+			this.SearchObjects_Button.Location = new System.Drawing.Point(606, 61);
 			this.SearchObjects_Button.Name = "SearchObjects_Button";
 			this.SearchObjects_Button.Size = new System.Drawing.Size(121, 23);
 			this.SearchObjects_Button.TabIndex = 18;
@@ -629,6 +629,7 @@
 			this.Objects_DataGridView.MultiSelect = false;
 			this.Objects_DataGridView.Name = "Objects_DataGridView";
 			this.Objects_DataGridView.ReadOnly = true;
+			this.Objects_DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.Objects_DataGridView.Size = new System.Drawing.Size(748, 323);
 			this.Objects_DataGridView.TabIndex = 19;
 			this.Objects_DataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Objects_DataGridView_CellContentClick);
@@ -752,7 +753,7 @@
 			this.ShowRequest_Button.Name = "ShowRequest_Button";
 			this.ShowRequest_Button.Size = new System.Drawing.Size(121, 26);
 			this.ShowRequest_Button.TabIndex = 29;
-			this.ShowRequest_Button.Text = "Show";
+			this.ShowRequest_Button.Text = "Details";
 			this.ShowRequest_Button.UseVisualStyleBackColor = true;
 			this.ShowRequest_Button.Click += new System.EventHandler(this.Show_Button_Click);
 			// 
@@ -799,6 +800,7 @@
 			this.Requests_DataGridView.MultiSelect = false;
 			this.Requests_DataGridView.Name = "Requests_DataGridView";
 			this.Requests_DataGridView.ReadOnly = true;
+			this.Requests_DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.Requests_DataGridView.Size = new System.Drawing.Size(756, 343);
 			this.Requests_DataGridView.TabIndex = 27;
 			// 
@@ -909,7 +911,7 @@
 			this.ShowActivity_Button.Name = "ShowActivity_Button";
 			this.ShowActivity_Button.Size = new System.Drawing.Size(121, 26);
 			this.ShowActivity_Button.TabIndex = 38;
-			this.ShowActivity_Button.Text = "Show";
+			this.ShowActivity_Button.Text = "Details";
 			this.ShowActivity_Button.UseVisualStyleBackColor = true;
 			this.ShowActivity_Button.Click += new System.EventHandler(this.ShowActivity_Button_Click);
 			// 
@@ -953,10 +955,11 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.Result});
-			this.Activities_DataGridView.Location = new System.Drawing.Point(3, 56);
+			this.Activities_DataGridView.Location = new System.Drawing.Point(9, 56);
 			this.Activities_DataGridView.MultiSelect = false;
 			this.Activities_DataGridView.Name = "Activities_DataGridView";
 			this.Activities_DataGridView.ReadOnly = true;
+			this.Activities_DataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.Activities_DataGridView.Size = new System.Drawing.Size(743, 319);
 			this.Activities_DataGridView.TabIndex = 37;
 			// 
