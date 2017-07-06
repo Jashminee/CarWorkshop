@@ -20,8 +20,8 @@ namespace CarWorkshop
             this.user = user;
 
             this.FormClosing += X_Clickd;
-            ActivityStatus_ComboBox.Items.AddRange(new object[] { "In progress", "Canceled", "Finished" });
-            RequestStatus_ComboBox.Items.AddRange(new object[] { "In progress", "Canceled", "Finished" });
+            ActivityStatus_ComboBox.Items.AddRange(new object[] { "-", "In progress", "Canceled", "Finished" });
+            RequestStatus_ComboBox.Items.AddRange(new object[] { "-", "In progress", "Canceled", "Finished" });
         }
 
         private void X_Clickd(object sender, FormClosingEventArgs e)
@@ -405,7 +405,14 @@ namespace CarWorkshop
             {
                 request.date_request = RequestDate_DateTimePicker.Value;
             }
-            request.status = RequestStatus_ComboBox.Text;
+            if (RequestStatus_ComboBox.Text != "-")
+            {
+                request.status = RequestStatus_ComboBox.Text;
+            }
+            else
+            {
+                request.status = "";
+            }
             GetRequests(request);
         }
 
@@ -416,8 +423,11 @@ namespace CarWorkshop
             {
                 activity.date_request = ActivityDate_DateTimePicker.Value;
             }
-            activity.status = ActivityStatus_ComboBox.Text;
-            if(ShowOnlyMyActivities_CheckBox.Checked)
+            if (ActivityStatus_ComboBox.Text != "-")
+                activity.status = ActivityStatus_ComboBox.Text;
+            else
+                activity.status = "";
+            if (ShowOnlyMyActivities_CheckBox.Checked)
             {
                 activity.id_personel = user.id_personel;
             }

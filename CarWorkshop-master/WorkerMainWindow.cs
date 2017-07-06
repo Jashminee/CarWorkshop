@@ -85,7 +85,7 @@ namespace CarWorkshop
                                                       select new
                                                       {
                                                           el.id_activity,
-                                                          el.seq_no,
+                                                          //el.seq_no,
                                                           el.description,
                                                           el.Act_dict.act_name,
                                                           el.date_request,
@@ -96,13 +96,13 @@ namespace CarWorkshop
 
                 Activity_DataGridView.Columns[0].Visible = false;
 
-                Activity_DataGridView.Columns[1].HeaderText = "Seq Nr";
-                Activity_DataGridView.Columns[2].HeaderText = "Description";
-                Activity_DataGridView.Columns[3].HeaderText = "Type";
-                Activity_DataGridView.Columns[4].HeaderText = "Date";
-                Activity_DataGridView.Columns[5].HeaderText = "Date finish";
-                Activity_DataGridView.Columns[6].HeaderText = "Status";
-                Activity_DataGridView.Columns[7].HeaderText = "Result";
+                //Activity_DataGridView.Columns[1].HeaderText = "Seq Nr";
+                Activity_DataGridView.Columns[1].HeaderText = "Description";
+                Activity_DataGridView.Columns[2].HeaderText = "Type";
+                Activity_DataGridView.Columns[3].HeaderText = "Date";
+                Activity_DataGridView.Columns[4].HeaderText = "Date finish";
+                Activity_DataGridView.Columns[5].HeaderText = "Status";
+                Activity_DataGridView.Columns[6].HeaderText = "Result";
             } catch(ServiceException exc)
             {
                 Alert.DisplayError(exc.Message);

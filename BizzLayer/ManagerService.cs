@@ -133,7 +133,9 @@ namespace BizzLayer
                              (String.IsNullOrEmpty(searchCrit.other) || el.other.StartsWith(searchCrit.other))
 							 &&
                              (String.IsNullOrEmpty(searchCrit.engine) || el.engine.StartsWith(searchCrit.engine))
-							 &&
+                             &&
+                             (String.IsNullOrEmpty(searchCrit.registration_number) || el.registration_number.StartsWith(searchCrit.registration_number))
+                             &&
                              ((searchCrit.year == null) || (el.year == searchCrit.year))
 							 &&
 							 (searchCrit.id_client == 0)
@@ -173,6 +175,7 @@ namespace BizzLayer
                 result.other = obj.other;
                 result.year = obj.year;
                 result.engine = obj.engine;
+                result.registration_number = obj.registration_number;
                 dc.SaveChanges();
             }
             catch (System.Data.Entity.Core.EntityException e)
