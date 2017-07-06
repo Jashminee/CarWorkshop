@@ -248,8 +248,44 @@ namespace CarWorkshop
                 Alert.DisplayError("No item selected!");
                 return;
             }
-            ActivityEditor activityEditor = new ActivityEditor((Activity)Activities_DataGridView.CurrentRow.DataBoundItem);
-            activityEditor.ShowDialog();
+            try
+            {
+                Activity activity = new Activity();
+                activity.id_activity = (int)Activities_DataGridView.CurrentRow.Cells[0].Value;
+                activity = ManagerService.GetActivities(activity).SingleOrDefault();
+                ActivityEditor activityEditor = new ActivityEditor(ManagerService.GetActivities(activity).SingleOrDefault());
+                activityEditor.ShowDialog();
+                activity = new Activity();
+                activity.id_request = request.id_request;
+                var result = ManagerService.GetActivities(activity);
+                Activities_DataGridView.Columns.Clear();
+                Activities_DataGridView.DataSource = (from el in result
+                                                      select new
+                                                      {
+                                                          el.id_activity,
+                                                          el.seq_no,
+                                                          el.description,
+                                                          el.Act_dict.act_name,
+                                                          el.date_request,
+                                                          el.date_fin_cancel,
+                                                          el.status,
+                                                          el.result
+                                                      }).ToList();
+
+                Activities_DataGridView.Columns[0].Visible = false;
+
+                Activities_DataGridView.Columns[1].HeaderText = "Seq Nr";
+                Activities_DataGridView.Columns[2].HeaderText = "Description";
+                Activities_DataGridView.Columns[3].HeaderText = "Type";
+                Activities_DataGridView.Columns[4].HeaderText = "Date";
+                Activities_DataGridView.Columns[5].HeaderText = "Date finish";
+                Activities_DataGridView.Columns[6].HeaderText = "Status";
+                Activities_DataGridView.Columns[7].HeaderText = "Result";
+            }
+            catch (ServiceException exc)
+            {
+                Alert.DisplayError(exc.Message);
+            }
         }
     }
 }

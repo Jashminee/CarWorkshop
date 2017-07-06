@@ -24,8 +24,18 @@ namespace CarWorkshop
 
             Worker_ComboBox.Items.AddRange(GetWorkers());
             this.activity = activity;
+            Worker_ComboBox.Items.AddRange(GetWorkers());
             Description_TextBox.Text = activity.description;
             GetTypes();
+            for(int i = 0; i < workers.Count; i++)
+            {
+                if(workers[i].id_personel == activity.id_personel)
+                {
+                    Worker_ComboBox.SelectedIndex = i;
+                    break;
+                }
+            }
+            Type_ComboBox.Text = activity.Act_dict.act_name;
         }
 
         public ActivityEditor(Request request)//new Activity mode
@@ -88,7 +98,7 @@ namespace CarWorkshop
                 {
                     activity = new Activity();
                 }
-                activity.act_type = (from el in types where Type_ComboBox.Text == el.act_name select el.act_type).SingleOrDefault();//find type in ist of types by selected name
+                activity.act_type = (from el in types where Type_ComboBox.Text == el.act_name select el.act_type).SingleOrDefault();//find type in list of types by selected name
                 activity.id_personel = workers[Worker_ComboBox.SelectedIndex].id_personel;
                 activity.description = Description_TextBox.Text;
                 if(request==null)

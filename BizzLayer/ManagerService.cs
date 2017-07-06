@@ -375,7 +375,7 @@ namespace BizzLayer
                 CarWorkshopModelContext dc = new CarWorkshopModelContext();
                 var result = (from el in dc.Activity
                               where
-                              el.id_request == activity.id_request
+                              el.id_activity == activity.id_activity
                               select el).SingleOrDefault();
                 if (result == null)
                 {
@@ -446,11 +446,6 @@ namespace BizzLayer
             } catch (System.Data.Entity.Core.EntityException e)
             {
                 throw new ServiceException("Database connection error!");
-            }
-            catch (System.Data.Entity.Validation.DbEntityValidationException e)
-            {
-                var x = e.EntityValidationErrors;
-                int a = 0;
             }
         }
 

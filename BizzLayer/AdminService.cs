@@ -52,6 +52,8 @@ namespace BizzLayer
                              (el.username == searchCrit.username)
                              &&
                              (el.password == searchCrit.password)
+                             &&
+                             ((el.date_retire == null) || (el.date_retire > System.DateTime.Now))
                              select el;
                 return result.SingleOrDefault<Personel>();
             }catch(System.Data.Entity.Core.EntityException e)
