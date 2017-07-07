@@ -584,7 +584,7 @@
 			// 
 			// SearchObjects_Button
 			// 
-			this.SearchObjects_Button.Location = new System.Drawing.Point(606, 61);
+			this.SearchObjects_Button.Location = new System.Drawing.Point(625, 11);
 			this.SearchObjects_Button.Name = "SearchObjects_Button";
 			this.SearchObjects_Button.Size = new System.Drawing.Size(121, 23);
 			this.SearchObjects_Button.TabIndex = 18;

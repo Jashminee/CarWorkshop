@@ -20,7 +20,7 @@ namespace CarWorkshop
             this.user = user;
 
             this.FormClosing += X_Clickd;
-            ActivityStatus_ComboBox.Items.AddRange(new object[] { "-", "In progress", "Canceled", "Finished" });
+            ActivityStatus_ComboBox.Items.AddRange(new object[] { "-", "Open", "In progress", "Canceled", "Finished" });
             RequestStatus_ComboBox.Items.AddRange(new object[] { "-", "In progress", "Canceled", "Finished" });
         }
 

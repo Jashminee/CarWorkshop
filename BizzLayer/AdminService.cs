@@ -20,7 +20,7 @@ namespace BizzLayer
                              &&
                              (String.IsNullOrEmpty(searchCrit.first_name) || el.first_name.Contains(searchCrit.first_name))
                              &&
-                             (String.IsNullOrEmpty(searchCrit.role) || el.role.StartsWith(searchCrit.role))
+                             (String.IsNullOrEmpty(searchCrit.role) || el.role.Contains(searchCrit.role))
                              select el;
                 return result;
             }

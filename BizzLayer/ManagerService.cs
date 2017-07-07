@@ -337,17 +337,17 @@ namespace BizzLayer
                 CarWorkshopModelContext dc = new CarWorkshopModelContext();
                 var result = from el in dc.Activity
                              where
-                             (String.IsNullOrEmpty(searchCrit.description) || el.description.StartsWith(searchCrit.description))
+                             (String.IsNullOrEmpty(searchCrit.description) || el.description.Contains(searchCrit.description))
 							 &&
                              ((searchCrit.id_personel == null) || (el.id_personel == searchCrit.id_personel))
 							 &&
-                             (String.IsNullOrEmpty(searchCrit.status) || el.status.StartsWith(searchCrit.status))
+                             (String.IsNullOrEmpty(searchCrit.status) || el.status.Contains(searchCrit.status))
 							 &&
-                             (String.IsNullOrEmpty(searchCrit.result) || el.result.StartsWith(searchCrit.result))
+                             (String.IsNullOrEmpty(searchCrit.result) || el.result.Contains(searchCrit.result))
 							 &&
                              ((searchCrit.date_fin_cancel == null) || (el.date_fin_cancel == searchCrit.date_fin_cancel))
 							 &&
-                             (String.IsNullOrEmpty(searchCrit.act_type) || el.act_type.StartsWith(searchCrit.act_type))
+                             (String.IsNullOrEmpty(searchCrit.act_type) || el.act_type.Contains(searchCrit.act_type))
 							 &&
                              ((searchCrit.seq_no == null) || (el.seq_no == searchCrit.seq_no))
 							 &&
